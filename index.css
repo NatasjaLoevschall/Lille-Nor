@@ -10,8 +10,105 @@ a {
 /* Body og generelle stilarter */
 body {
   background-color: #FBF4EE; /* Lys cremefarvet baggrund */
-
 }
+
+/* Header */
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 90px;
+  width: 100%;
+  z-index: 999;
+  border-radius: 30px 30px 30px 30px;
+  border: #E4B66C 2px solid;
+}
+
+.icons {
+  display: flex;
+  gap: 15px;
+}
+
+.icons img {
+  height: 25px;
+  cursor: pointer;
+}
+
+.navbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+  padding: 0 2rem;
+  max-width: 1600px;
+  background-color: #544945;
+  height: 70px;
+  border-radius: 20px 20px 20px 20px;
+}
+
+.navbar-logo img {
+  height: 40px;
+}
+
+.navbar-container .nav-links {
+  display: flex;
+  text-align: center;
+  gap: 1.5rem;
+  list-style: none;
+}
+
+.navbar-container .nav-links li a {
+  color: #FFFAF6;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 500;
+  margin: 20px;
+  transition: background-color 0.3s, color 0.3s;
+  white-space: nowrap;
+}
+
+#btn {
+  font-weight: bold;
+  background-color: #E4B66C;
+  padding: 10px 15px;
+  border-radius: 10px;
+  color: #332823;
+}
+
+#btn:hover {
+  background-color: #C4913D;
+  color: #ffffff;
+}
+
+.nav-links li a {
+  position: relative;           /* nødvendig for at placere ::after */
+  padding-bottom: 4px;          /* giver plads til stregen */
+}
+
+/* Stregen (skjult fra start) */
+.nav-links li a:not(#btn)::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;                     /* starter uden bredde */
+  height: 2px;                  /* din ønskede højde */
+  background: #E4B66C;          /* din farve */
+  transition: width 0.25s ease; /* animation */
+}
+
+/* Stregen bliver synlig ved hover */
+.nav-links li a:not(#btn):hover::after {
+  width: 100%;                  /* vokser ud under teksten */
+}
+
 /* Bamse */
 
 #teddy-default {
