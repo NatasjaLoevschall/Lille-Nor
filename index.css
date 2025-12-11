@@ -12,12 +12,27 @@ body {
   background-color: #FBF4EE; /* Lys cremefarvet baggrund */
 }
 
+h1 {
+  font-family: 'kalam';
+  color: #332823;
+  font-size: 50px;
+  font-weight: 500;
+}
+
+h2 {
+  font-family: 'Source Sans 3', sans-serif;
+  color: #332823;
+  font-size: 40px;
+  font-weight: 500;
+}
+
 /* Header */
 
 header {
   position: sticky;
   top: 0;
   z-index: 1000;
+  background-color: #FBF4EE;
 }
 
 .navbar {
@@ -28,7 +43,6 @@ header {
   width: 100%;
   z-index: 999;
   border-radius: 30px 30px 30px 30px;
-  border: #E4B66C 2px solid;
 }
 
 .icons {
@@ -382,4 +396,116 @@ header {
 .review-name {
   font-weight: 500;
   margin-top: 0.5rem;
+}
+
+/* Footer */
+
+footer .container{
+    background-color: #544945;
+}
+
+.row{
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 100px;
+}
+.footer-col ul{
+    list-style: none;
+}
+
+.footer-col p {
+    color: #FFFAF6;
+    padding-bottom: 10px;
+}
+
+.footer-col h4{
+    color: white;
+    margin-bottom: 25px;
+    font-size: 22px;
+    position: relative;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.footer-col h4::before{
+    content: '';
+    width: 70px;
+    height: 1px;
+    position: absolute;
+    background-color: #E4B66C;
+    bottom: -10px;
+}
+
+
+.footer-col ul li a{
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+.footer-col ul li a:hover{
+    opacity: 1;
+}
+
+.footer-col a {
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+.footer-col a {
+    text-decoration: none;
+    color: #FFFAF6;
+}
+
+.col p{
+    color: white;
+}
+.row hr{
+    opacity: 0.7;
+}
+
+.socialIcons {
+    display: flex; 
+    gap: 15px;   
+    margin-top: 30px;             
+}
+
+.socialIcons a img {
+    height: 24px;                  
+    width: 24px;                   
+    object-fit: contain;           
+    display: block;                
+    filter: brightness(0) invert(1);          
+    transition: opacity 0.2s ease;
+}
+
+.socialIcons a img:hover {
+    opacity: 0.7;
+}
+
+span{
+    color: #FFFAF6;
+}
+
+.opening-row {
+  display: flex;
+  justify-content: space-between;
+  width: 180px; /* eller hvad der passer til dit design */
+  margin-bottom: 0.4rem;
+}
+
+@media (max-width: 600px){
+    footer .row{
+        flex-direction: column;
+        padding: 20px 30px;
+    }
+
+    footer .footer-col ul{
+        margin-left: 20px;
+        margin-bottom: 20px;
+    }
+    .footer-col input{
+        width: 100%;
+    }
 }
