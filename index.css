@@ -311,6 +311,9 @@ header {
 
 /* Karrusel sektion */
 .reviews {
+background-image: url('images/baggrund.svg');
+background-repeat: no-repeat;
+background-size: cover;
   padding: 4rem 1.5rem;
   text-align: center;
 }
