@@ -3,3 +3,93 @@
     padding: 0;
     font-family: 'Source Sans 3', sans-serif;
 }
+/* Ny kunde hos lille nor sektion */
+.lille-nor-new {
+    background-color: #f9f1e9;
+    padding: 6rem 0 8rem;   /* ekstra bund-plads til bien */
+    position: relative;     /* så bien kan placeres ift. sektionen */
+  }
+  
+  /* Max bredde og placering på siden */
+  .ln-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    padding: 0 2rem;
+    position: relative;
+    z-index: 2; /* indholdet ligger over bien */
+  }
+  
+  /* Billeddelen */
+  .ln-image-wrapper {
+    flex: 0.6;             /* billedet fylder ca. 60% af venstre side */
+    max-width: 480px;
+    border-radius: 40px;
+    overflow: hidden;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+    position: relative;
+    z-index: 3;            /* billedet ligger øverst */
+  }
+  
+  .ln-image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  
+  /* Tekstdelen */
+  .ln-content {
+    flex: 1;
+    text-align: left;
+  }
+  
+  /* Overskrift */
+  .ln-content h2 {
+    font-size: 2.6rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Brødtekst */
+  .ln-text {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 0 0 0.6rem;
+    color: #332823;
+  }
+  
+  /* Knap */
+  .ln-btn {
+    margin-top: 2rem;
+    padding: 0.9rem 2.8rem;
+    border-radius: 999px;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 500;
+    background-color: #e2b15d;
+    color: #332823;
+    transition: transform 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease;
+  }
+  
+  .ln-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
+    background-color: #d59f49;
+  }
+  
+  /* BI + FLYVESTI (ét billede) */
+  .ln-bee-image {
+    position: absolute;
+    width: 360px;          /* justér størrelse */
+    left: 35%;             /* ca. midt i sektionen */
+    bottom: 0;             /* tæt på bunden af sektionen */
+    transform: translateX(-20%);
+    z-index: 0;            /* bag indholdet */
+    opacity: 0.9;
+    pointer-events: none;
+  }
+
+/* Karrusel sektion */
