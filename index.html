@@ -15,15 +15,42 @@
     family=Oxanium:wght@200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,
     700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Source+Sans+3:ital,
     wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+
+    <script src="bamse.js" defer></script>
 </head>
 <body>
+
+    <!-- Bamse i højre hjørne -->
+
+    <div id="teddy-default">
+      <img id="teddy-img" src="images/bamsevinker_show.gif" alt="">
+    </div>
+
+   <!-- Popup midt på skærmen -->
+    <div id="bear-popup-overlay">
+      <div class="popup-content">
+        <button class="popup-close" id="popup-close-btn">&times;</button>
+
+          <h1>Hej fra os</h1>
+
+          <img src="images/popup_img.jpg" id="popup-img" alt="">
+
+          <p>
+          Vil du gerne blive klog på vores koncept og hvordan vi kan hjælpe dig?
+          </p>
+          
+          <a href="#" class="cta-btn">Læs mere om konceptet</a>
+
+          <img src="images/bi.svg" alt="et billede af en bi" id="popup-bi">
+      </div>
+    </div>
 
     <section class="lille-nor-new">
         <div class="ln-container">
           <!-- VENSTRE: Billede -->
           <div class="ln-image-wrapper">
             <!-- Skift src til din egen billedsti -->
-            <img src="Forsidebilleder/ejeraflillenor.png" alt="De to ejer foran Lille Nor's butik" />
+            <img src="images/ejeraflillenor.png" alt="De to ejer foran Lille Nor's butik" />
           </div>
       
           <!-- HØJRE: Tekst + knap -->
@@ -41,7 +68,7 @@
           </div>
         </div>
         <!-- BI-BILLEDE -->
-        <img src="Forsidebilleder/bibaggrund.png" alt="En bi" class="ln-bee-image" />
+        <img src="images/bi.svg" alt="En bi" class="ln-bee-image" />
       </section>
     <footer>
         <p>© 2024 Lille Nor. All rights reserved.</p>   

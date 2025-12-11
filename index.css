@@ -3,6 +3,109 @@
     padding: 0;
     font-family: 'Source Sans 3', sans-serif;
 }
+
+a {
+  text-decoration: none; /* Fjerner understregning */
+}
+
+/* Bamse */
+
+#teddy-default {
+  position: fixed;
+  right: 40px;
+  bottom: -100px;                      /* starter synlig */
+  width: 160px;                   /* tilpas størrelse */
+  cursor: pointer;
+  z-index: 1000;
+  transition: bottom 0.35s ease;  /* så den kan glide op/ned */
+}
+
+#teddy-default img {
+  display: block;
+  max-height: 400px;
+}
+
+/* Når bamsen er "trukket ned" efter man har lukket popup */
+#teddy-default.lowered {
+  bottom: -270px;   /* justér hvor meget den skal gemmes */
+}
+
+/* popup-box */
+
+#bear-popup-overlay {
+  position: fixed;
+  inset: 0; 
+  display: none;            
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 2000;
+}
+
+.popup-content {
+  background: #FBF4EE;
+  max-width: 700px;
+  border-radius: 14px;
+  position: relative;
+  box-shadow: 0 10px 30px #332823;
+  width: 90%;
+  padding: 50px;
+
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  
+  height: auto;
+}
+
+.popup-close {
+  position: absolute;
+  top: 10px;
+  right: 14px;
+  border: none;
+  background: none;
+  line-height: 1;
+  cursor: pointer;
+  font-size: 50px;
+  color: #332823;
+}
+
+.cta-btn {
+  background-color: #E4B66C;
+  color: #332823;
+  padding: 10px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 20px;
+}
+
+#popup-img {
+  width: 60%;         /* eller 50%, 70% osv */
+  height: auto;       /* bevarer proportioner */
+  border-radius: 10px; /* valgfrit */
+  margin: 20px 0;
+}
+
+.popup-content p {
+  margin: 20px 0;
+}
+
+#popup-bi {
+  position: absolute;
+  width: 150px;
+  left: 0px;
+  bottom: 0px;
+}
+
+.cta-btn:hover {
+  background-color: #C4913D;
+  color: #ffffff;
+}
+
 /* Ny kunde hos lille nor sektion */
 .lille-nor-new {
     background-color: #f9f1e9;
