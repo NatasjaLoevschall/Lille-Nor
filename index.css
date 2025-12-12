@@ -276,7 +276,7 @@ header.scrolled {
   border-radius: 14px;
   position: relative;
   box-shadow: 0 10px 30px #332823;
-  width: 90%;
+  width: 100%;
   padding: 50px;
 
   display: flex;
@@ -312,14 +312,15 @@ header.scrolled {
 }
 
 #popup-img {
-  width: 60%;         /* eller 50%, 70% osv */
+  max-width: 70%;         /* eller 50%, 70% osv */
   height: auto;       /* bevarer proportioner */
   border-radius: 10px; /* valgfrit */
-  margin: 20px 0;
+  margin: 10px 0;
+  object-fit: contain;
 }
 
 .popup-content p {
-  margin: 20px 0;
+ margin: 10px 0;
 }
 
 #popup-bi {
