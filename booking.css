@@ -8,7 +8,275 @@ body {
     color: #332823;
     font-family: 'Source Sans 3', sans-serif;
 }
+/*HEADER*/
+/* Header */
 
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  background-color: transparent;
+  transition: 
+      background-color 0.6s ease,
+      backdrop-filter 0.6s ease;
+}
+
+header.scrolled {
+  background-color: #FBF4EE; 
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 90px;
+  width: 100%;
+  z-index: 999;
+  border-radius: 30px 30px 30px 30px;
+}
+
+.icons {
+  display: flex;
+  gap: 15px;
+
+  position: relative;
+}
+
+.icons img {
+  height: 25px;
+  cursor: pointer;
+}
+
+/* Knap til søgning (uden standard-knap-styling) */
+.search-toggle {
+  border: none;
+  background: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+/* Selve dropdown-boksen – skjult som udgangspunkt */
+.search-dropdown {
+  position: absolute;
+  top: 170%;          /* lige under ikonerne */
+  right: 50%;        /* justér efter behov */
+  background: #FBF4EE;
+  padding: 8px 10px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+  display: none;      /* skjult til at starte med */
+  z-index: 1500;
+}
+
+.search-dropdown.open {
+  display: block;     /* vises når jeg tilføjer .open i JS */
+}
+
+/* Formularen indeni */
+.search-form {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.search-form input {
+  padding: 6px 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  min-width: 200px;
+  font-size: 14px;
+}
+
+/* Luk-knap (kryds) */
+.search-close {
+  background: none;
+  border: none;
+  font-size: 25px;
+  line-height: 1;
+  cursor: pointer;
+  color: #332823;
+}
+
+.navbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+  padding: 0 2rem;
+  max-width: 1600px;
+  background-color: #544945;
+  height: 70px;
+  border-radius: 20px 20px 20px 20px;
+}
+
+.navbar-logo img {
+  height: 40px;
+}
+
+.navbar-container .nav-links {
+  display: flex;
+  text-align: center;
+  gap: 1.5rem;
+  list-style: none;
+}
+
+.navbar-container .nav-links li a {
+  color: #FFFAF6;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  margin: 20px;
+  transition: background-color 0.3s, color 0.3s;
+  white-space: nowrap;
+}
+
+#btnheader {
+  font-weight: bold;
+  background-color: #E4B66C;
+  padding: 10px 15px;
+  border-radius: 10px;
+  color: #332823;
+}
+
+#btn:hover {
+  background-color: #C4913D;
+  color: #ffffff;
+}
+
+.nav-links li a {
+  position: relative;           /* nødvendig for at placere ::after */
+  padding-bottom: 4px;          /* giver plads til stregen */
+}
+
+
+/* Stregen (skjult fra start) */
+.nav-links li a:not(#btn)::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;                     /* starter uden bredde */
+  height: 2px;                  /* din ønskede højde */
+  background: #E4B66C;          /* din farve */
+  transition: width 0.25s ease; /* animation */
+}
+
+/* Stregen bliver synlig ved hover */
+.nav-links li a:not(#btn):hover::after {
+  width: 100%;                  /* vokser ud under teksten */
+}
+
+/*HEADER SLUT*/
+
+
+/*BAMSE POP-UP*/
+
+
+/* Bamse */
+
+#teddy-default {
+  position: fixed;
+  right: 40px;
+  bottom: -100px;                      /* starter synlig */
+  width: 160px;                   /* tilpas størrelse */
+  cursor: pointer;
+  z-index: 1000;
+  transition: bottom 0.35s ease;  /* så den kan glide op/ned */
+}
+
+#teddy-default img {
+  display: block;
+  max-height: 400px;
+}
+
+/* Når bamsen er "trukket ned" efter man har lukket popup */
+#teddy-default.lowered {
+  bottom: -270px;   /* justér hvor meget den skal gemmes */
+}
+
+/* popup-box */
+
+#bear-popup-overlay {
+  position: fixed;
+  inset: 0; 
+  display: none;            
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 2000;
+}
+#bear-popup-overlay h1{
+      font-family: 'Kalam', cursive;
+      font-size: 40px;
+      font-weight: 300px;
+}
+
+.popup-content {
+  background: #FBF4EE;
+  max-width: 700px;
+  border-radius: 14px;
+  position: relative;
+  box-shadow: 0 10px 30px #332823;
+  width: 100%;
+  padding: 50px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  height: auto;
+}
+
+.popup-close {
+  position: absolute;
+  top: 10px;
+  right: 14px;
+  border: none;
+  background: none;
+  line-height: 1;
+  cursor: pointer;
+  font-size: 50px;
+  color: #332823;
+}
+
+.cta-btn {
+  background-color: #E4B66C;
+  color: #332823;
+  padding: 10px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 20px;
+  text-decoration: none;
+}
+
+#popup-img {
+  max-width: 70%;         /* eller 50%, 70% osv */
+  height: auto;       /* bevarer proportioner */
+  border-radius: 10px; /* valgfrit */
+  margin: 10px 0;
+  object-fit: contain;
+}
+
+.popup-content p {
+ margin: 10px 0;
+}
+
+#popup-bi {
+  position: absolute;
+  width: 150px;
+  left: 0px;
+  bottom: 0px;
+}
+
+.cta-btn:hover {
+  background-color: #C4913D;
+  color: #ffffff;
+}
+
+/* Hero sektion */
  #hero {
     width: 100%;
     height: 100vh;
@@ -670,9 +938,8 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 20px;
     width: 83%;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
 }
 #regler p{
     font-size: 14px;
@@ -694,11 +961,11 @@ body {
 }
 
 /* Postnummer + by ligger side by side */
-.row {
+.rowoplys {
     display: flex
 }
 
-.row div {
+.rowoplys div {
     width: 44%;
 }
 
@@ -721,4 +988,104 @@ body {
     color: white;
 }
 
+/*FOOTER*/
+
+/* Footer */
+
+footer .containerfooter{
+    background-color: #544945;
+    padding-bottom: 40px;
+    margin-top: 100px;
+}
+
+.row{
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 100px;
+}
+.footer-col ul{
+    list-style: none;
+}
+
+.footer-col p {
+    color: #FFFAF6;
+    padding-bottom: 10px;
+}
+
+.footer-col h3{
+    color: white;
+    margin-bottom: 25px;
+    font-size: 20px;
+    position: relative;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.footer-col h4::before{
+    content: '';
+    width: 70px;
+    height: 1px;
+    position: absolute;
+    background-color: #E4B66C;
+    bottom: -10px;
+}
+
+
+.footer-col ul li a{
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+.footer-col ul li a:hover{
+    opacity: 1;
+}
+
+.footer-col a {
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+.footer-col a {
+    text-decoration: none;
+    color: #FFFAF6;
+}
+
+.col p{
+    color: white;
+}
+.row hr{
+    opacity: 0.7;
+}
+
+.socialIcons {
+    display: flex; 
+    gap: 15px;   
+    margin-top: 30px;             
+}
+
+.socialIcons a img {
+    height: 24px;                  
+    width: 24px;                   
+    object-fit: contain;           
+    display: block;                
+    filter: brightness(0) invert(1);          
+    transition: opacity 0.2s ease;
+}
+
+.socialIcons a img:hover {
+    opacity: 0.7;
+}
+
+span{
+    color: #FFFAF6;
+}
+
+.opening-row {
+  display: flex;
+  justify-content: space-between;
+  width: 180px; /* eller hvad der passer til dit design */
+  margin-bottom: 0.4rem;
+}
 
