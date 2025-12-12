@@ -25,6 +25,11 @@ body {
   cursor: pointer;
 }
 
+#betalingsbillede {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
 
 #godkendt {
   display: none; /* skjult indtil man klikker */
