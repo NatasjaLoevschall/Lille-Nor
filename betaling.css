@@ -7,6 +7,7 @@ body {
 #box {
   background: white;
   width: 30%;
+  height: auto;
   margin: 60px auto;
   padding: 20px;
   border-radius: 18px;
