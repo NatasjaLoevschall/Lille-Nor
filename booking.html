@@ -5,15 +5,89 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Forside</title>
     <link rel="stylesheet" href="booking.css">
-    <script src="booking.js" defer></script>
+    <link rel="stylesheet" href="index.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+    <script src="booking.js" defer></script>
+    <script src="bamse.js" defer></script>
+    <script src="header.js" defer></script>
 </head>
+
+<!--HEADER-->
+    
+
 <body>
-<div id="hero">
-    <h1>Book din reol</h1>
+
+
+    <header>
+    <nav class="navbar">
+      <div class="navbar-container">
+        <a href="index.html" class="navbar-logo">
+          <img src="images/lille-nor_laptop.svg" alt="Lille Nor logo">
+        </a>
+
+        <ul class="nav-links">
+            <li><a href="#">VORES KONCEPT</a></li>
+            <li><a href="#">PRISER OG BETINGELSER</a></li>
+            <li><a href="#">HVEM ER VI</a></li>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">GAVEKORT</a></li>
+            <li><a href="booking.html" id="btn">BOOK DIN REOL</a></li>
+        </ul>
+
+        <div class="icons">
+        <!-- Søgeikon som knap -->
+            <button class="search-toggle" type="button">
+                <img src="images/search_icon.svg" alt="Søgeikon">
+            </button>
+
+        <!-- SELVE SØGE-BOKSEN -->
+        <div class="search-dropdown">
+            <form action="#" class="search-form">
+                <input type="text" placeholder="Søg på siden..." />
+                <button type="button" class="search-close">&times;</button>
+                </form>
+            </div>
+
+        <!-- Profil-ikon som før -->
+        <a href="">
+            <img src="images/myprofile_icon.svg" alt="Min profil">
+        </a>
 </div>
+
+      </div>
+    </nav>
+    </header>
+        <div id="hero">
+            <h1>Book din reol</h1>
+        </div>
+
+    <!-- Bamse i højre hjørne -->
+
+    <div id="teddy-default">
+      <img id="teddy-img" src="images/bamsevinker_show.gif" alt="Animation af en bamse der vinker">
+    </div>
+
+       <!-- Popup midt på skærmen -->
+    <div id="bear-popup-overlay">
+      <div class="popup-content">
+        <button class="popup-close" id="popup-close-btn">&times;</button>
+
+          <h1>Er du i tvivl?</h1>
+
+          <img src="images/popup_img.jpg" id="popup-img" alt="Billede af ejerne">
+
+          <p>
+          Vil du gerne blive klog på vores koncept og hvordan vi kan hjælpe dig?
+          </p>
+          
+          <a href="#" class="cta-btn">Læs mere om konceptet</a>
+
+          <img src="images/bi.svg" alt="et billede af en bi" id="popup-bi">
+      </div>
+    </div>
+
 
 <!--Vælg din reolpakke - step 1-->
 <div id="baggrundscirkel1"> <!--Buet baggrund container-->
