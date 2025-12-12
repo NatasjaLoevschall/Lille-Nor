@@ -312,14 +312,15 @@ header.scrolled {
 }
 
 #popup-img {
-  max-width: 60%;         /* eller 50%, 70% osv */
+  max-width: 70%;         /* eller 50%, 70% osv */
   height: auto;       /* bevarer proportioner */
   border-radius: 10px; /* valgfrit */
-  margin: 20px 0;
+  margin: 10px 0;
+  object-fit: contain;
 }
 
 .popup-content p {
-  margin: 20px 0;
+ margin-bottom: 10px;
 }
 
 #popup-bi {
