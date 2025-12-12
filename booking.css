@@ -1,0 +1,724 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Source Sans 3', sans-serif;
+}
+
+body {
+    background-color: #FBF4EE;
+    color: #332823;
+}
+
+
+/*Generelle CSS regler*/
+
+/*overskrift flexboks*/
+
+.overskrift{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.overskrift h1{
+    font-size: 27px;
+    font-weight: 700;
+    text-align: center;
+}
+.overskrift img{
+    width: 50px;
+    height: 50px;
+}
+
+/*container med de to bokse*/
+
+.container {
+   width: 75%;
+   height: 75%;
+   display: flex;
+   justify-content: center;   /* Horisontal centrering */
+   align-items: flex-start;    /* Flugter til toppen */
+   margin-top: 40px;
+   gap: 40px;
+}
+
+/*brun boks med knap i*/
+.boksogknap{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 28%; 
+    gap: 30px;
+}
+.knap{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    
+}
+.knap button{
+    background-color: #E4B66C;
+    width: 200px;
+    height: 50px;
+    border-radius: 10px;
+    border: none;
+    font-size: 16px;
+    
+}
+.knap button:hover{
+    background-color: #C4913D;
+    color: white;
+    cursor: pointer;
+}
+ #baggrundscirkel1 {
+    width: 100%;
+    height: 100vh;
+    background-image: url('billeder/cirkel1.svg'); /*gør buen til baggrundsbillede*/
+    background-repeat: no-repeat;
+    background-size: cover; 
+    background-position: center;
+    display: flex;              
+    justify-content: center;    
+    align-items: flex-start;        
+}
+ 
+ /* Container */
+  .container1 {
+    width: 75%;                   /* Gør plads til de brede kort */
+    margin-top: 40px;
+  }
+  
+  
+  /* Wrapper som indeholder alle tre kort */
+  .card-wrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;                       /* LUFT mellem kortene */
+  }
+  
+  /* Selve kortene */
+  .card {
+    width: 22%;                    /* Gør kortene bredere */
+    background: #ffffff;
+    border-radius: 28px;
+    padding: 40px 35px 35px;
+    text-align: center;
+    border: 7px solid transparent;
+    transition: 0.25s ease;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    cursor: pointer;
+    margin-top: 40px;
+  }
+  
+  .card h2 {
+    font-size: 22px;
+    margin-bottom: 25px;
+  }
+  .card p {
+    font-size: 15px;
+    color: #332823;
+  }
+  
+  /* Ikon baggrundscirkel */
+  .icon-circle {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    background: #ffffff;
+    margin: 0 auto 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .icon {
+    width: 160px;
+  }
+  
+  /* Tekst under ikonet */
+  .desc {
+    font-size: 16px;
+    line-height: 1.55;
+    margin-bottom: 30px;
+    color: #332823;
+  }
+  
+  /* Knap */
+  .btn {
+    width: 80%;
+    background:  #E4B66C;
+    color: #332823;
+    border: none;
+    border-radius: 10px;
+    padding: 14px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.2s;
+  }
+  
+    /* Knap */
+  #btn {
+    width: 80%;
+    background:  #E4B66C;
+    color: #332823;
+    border: none;
+    border-radius: 10px;
+    padding: 14px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.2s;
+  }
+  
+  /* VALGT kort */
+#btn:hover, .btn:hover {
+    background: #C4913D;
+    color: #ffffff;
+  }
+  
+  .card:hover{
+    border-color: #d3ad73;           /* Gul ramme */
+  }
+  
+/*baggrundsbillede flexboks - Step 2, vælg din lejeperiode*/
+#baggrundscirkel2{
+    width: 100%;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover; 
+    background-position: center;
+    display: flex; 
+    flex-direction: column;              
+    justify-content: center;    
+    align-items: center;        
+}
+
+/*boks1 flexboks med kort*/
+#boks{
+    width: 70%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;              /* mellemrum mellem kortene */      
+}
+
+.kort1{
+    box-sizing: border-box;
+    flex: 0 0 calc((100% - 3 * 25px) / 4);
+    height: 180px;
+    background-color: white;
+    border-radius: 25px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 7px solid transparent; /* usynlig border */
+    transition: 0.2s ease;         /* smooth animation */
+}
+
+.kort1 h2 {
+    font-size: 24px;
+    margin-bottom: 6px;
+    font-weight: 600;
+    color: #3a2f2f;
+    margin-top: 40px;
+}
+
+.kort1 p {
+    font-size: 20px;
+    color: #3a2f2f;
+    margin-top: 20px;
+    font-weight: 300;
+}
+
+.kort1:hover {
+    border-color: #C4913D; /* farven på hover-bordet */
+}
+
+.kort1.aktiv {
+    border-color: #C4913D !important; /* samme farve som hover på andre kort */
+
+}
+
+.tekstboks {
+    display: flex;
+    flex-direction: column;
+    height: 100%; /* hvis nødvendigt */
+    padding: 30px;
+}
+.tekstboks h2 {
+    font-weight: 600;
+    margin-bottom: 20px;
+    padding-left: 10px;
+}
+
+.valg-linje {
+    display: flex;
+    align-items: center;
+    gap: 12px;                 /* afstand mellem ikon og tekst */
+    width: 100%;
+    padding: 10px;
+}
+
+/* nederste prislinje */
+.prislinje{
+    margin-top: auto;            /* skubber den ned i bunden */
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 20px;
+    border-top: 2px solid white;
+    padding-top: 20px;
+}
+
+.valg-ikon {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+}
+
+/*VÆLG DIN DATO SEKTION*/
+
+/*baggrundsbillede2 flexboks*/
+#baggrundscirkel3{
+    width: 100%;
+    height: 100vh;
+    background-image: url('billeder/bue2.svg'); /*gør buen til baggrundsbillede*/
+    background-repeat: no-repeat;
+    background-size: cover; 
+    background-position: center;
+    display: flex; 
+    flex-direction: column;              
+    justify-content: center;    
+    align-items: center;       
+}
+
+.kalender{
+    width: 95%;  
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 50px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    min-height: 510px;
+}
+
+/* mørk top med måned */
+.kalender-top{
+    background-color: #534038;
+    border-radius: 30px 30px 0 0;
+    padding: 28px 30px;
+    margin-bottom: 25px;
+    display: flex;
+    justify-content: center;       /* centrerer teksten */
+    align-items: center;
+    gap: 200px;
+}
+
+.kalender-top h2{
+    color: #FFFFFF;
+    font-size: 22px;
+    font-weight: 400;
+    text-align: center;
+}
+
+/* Pile-knapper */
+.pil {
+    cursor: pointer;
+    font-size: 20px;
+    color: white;
+    padding: 5px 10px;
+    color: #ffffff;
+}
+
+/* ugedage-rækken */
+.kalender-ugedage{
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 16px;
+    margin-bottom: 10px;
+    padding: 0 20px;
+    color: #332823;
+    font-size: 14px;
+    text-align: center;
+}
+
+
+/* dato-rækker */
+.kalender-dage{
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 14px;
+    margin-bottom: 30px;
+    padding: 0 20px;
+}
+
+.dag{
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+/* ledige datoer – grøn firkant */
+.dag-ledig{
+    background-color: #F0FAF2;
+    border: 2px solid #9BD18A;
+    color: #3a2f2f;
+    cursor: pointer;
+}
+
+
+/* optaget datoer – grå firkant */
+.dag-optaget{
+    background-color: #8B817C;
+    color: #FFFFFF;
+    cursor: not-allowed;
+}
+
+/* ===== KALENDER INTERAKTION ===== */
+
+/* Ledige datoer – hover (mere grøn) */
+.dag-ledig:hover {
+    background-color: #88c388;
+    border-color: #88c388;
+    color: #ffffff;
+}
+
+/* Optaget datoer – hover (rødlig) */
+.dag-optaget:hover {
+    background-color: #C38894;
+}
+
+/* cirkler nederst */
+.kalender-cirkler{
+    margin-top: auto;
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.cirkler-item{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 16px;
+}
+
+.cirkel-dot{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 3px solid #9BD18A;
+    display: inline-block;
+}
+
+.cirkel-ledig{
+    background-color: #F0FAF2;
+}
+
+.cirkel-optaget{
+    border-color: #8B817C;
+    background-color: #8B817C;
+}
+
+
+/*baggrundsbillede2 flexboks*/
+#baggrundscirkel4 {
+    width: 100%;
+    height: 100vh;
+    background-image: url('billeder/bue1.svg'); /*gør buen til baggrundsbillede*/
+    background-repeat: no-repeat;
+    background-size: cover; 
+    background-position: center;
+    display: flex; 
+    flex-direction: column;              
+    justify-content: center;    
+    align-items: center;        
+}
+
+
+/*boks med stand*/
+#boks1{
+    width: 70%;
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 30px;
+}
+#stand{
+    width: 80%;
+    height: 80%;
+    background-color: white;
+    padding: 60px;
+    border-radius: 50px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+#standinfo{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 16px;
+    font-weight: 500;
+    margin-left: 20px;
+}
+#standinfo img{
+    width: 30px;
+    height: 3   0px;
+}
+#standinfo p{
+    margin-right: 40px;
+    color: #332823;
+}
+/*cursor på tal og farve*/
+.ledig text {
+    cursor: pointer;
+    fill: #507b50; /* mørk grøn farve ved hover */
+}
+
+/*hover på figurer*/
+
+.ledig rect, .ledig path, .ledig polygon {
+    cursor: pointer;
+    fill: #D9F0D9; /* lys grøn farve */
+    transition: 0.2s ease; /* gør hover smooth */
+}
+.ledig rect:hover, .ledig path:hover, .ledig polygon:hover {
+    fill: #88C388; /* mørk grøn farve ved hover */  
+}
+.ledig:hover text {
+    fill: white !important;
+}
+/* Når en stand er valgt */
+.valgt rect,
+.valgt path,
+.valgt polygon {
+    fill: #88C388 !important;  /* permanent mørk grøn */
+    transition: 0.2s ease;
+}
+
+.valgt text {
+    fill: white !important; /* hvid tekst */
+}
+
+.optaget rect, .optaget path, .optaget polygon {
+    cursor: not-allowed;
+    transition: 0.2s ease; /* gør hover smooth */
+}
+.optaget rect:hover, .optaget path:hover, .optaget polygon:hover {
+    fill: #C38894; /* mørk rød farve ved hover */
+}
+/*boks 2 valgt stand*/
+#valgt-stand{
+    font-size: 18px;
+    font-weight: 500;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40%;
+    font-family: 'Source Sans 3', sans-serif;
+}  
+
+/*baggrundsbillede2 flexboks*/
+#baggrundscirkel5 {
+    width: 100%;
+    height: 100vh;
+    background-image: url('billeder/bue2.svg'); /*gør buen til baggrundsbillede*/
+    background-repeat: no-repeat;
+    background-size: cover; 
+    background-position: center;
+    display: flex; 
+    flex-direction: column;              
+    justify-content: center;    
+    align-items: center;        
+}
+
+/*boks1 flexboks med kort*/
+
+#boks3{
+    width: 70%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    gap: 50px;
+}
+.kort{
+    width: 170px;
+    height: 170px;
+    background-color: white;
+    border-radius: 25px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 15px;
+    text-align: center;
+    font-family: 'Source Sans 3', sans-serif;
+    cursor: pointer;
+    border: 7px solid transparent; /* usynlig border */
+    transition: 0.2s ease;         /* smooth animation */
+}
+.kort:hover {
+    border-color: #C4913D; /* farven på hover-bordet */
+}
+.valgtkort {
+    border-color: #C4913D !important;  /* hvid tekst */ 
+}
+.kort img {
+    width: 100px;
+    height: 50%;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+.kort h3 {
+    font-size: 15px;
+    font-weight: 500;
+    height: 30%;
+}
+
+.pris {
+    height: 20%;
+    font-size: 20px;
+    font-weight: 700;
+}
+.note {
+    font-size: 14px;
+    margin-top: -5px;
+    color: #555;
+    height: 5%;
+}
+/*brun boks med knap i*/
+.boks{
+    width: 100%; 
+    height: 85%;
+    background-color:#534038;
+    border-radius: 50px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    border-radius: 50px;
+    color: white;
+    gap: 15px;
+}
+
+#valgt-pris{
+    font-size: 18px;
+    font-weight: 500;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40%;
+    font-family: 'Source Sans 3', sans-serif;
+}   
+
+
+/*indtast dine oplysninger sektion*/
+
+/*store container til overskrift og de 2 bokse*/
+#container-oplysninger{
+    width: 100%;
+    height: 100vh;
+    display: flex; 
+    flex-direction: column;              
+    justify-content: center;    
+    align-items: center;        
+}
+/*overskrift flexboks*/
+#overskrift2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+#overskrift2 h1{
+    font-size: 27px;
+    font-weight: 700;
+    text-align: center;
+}
+#overskrift2 img{
+    width: 50px;
+    height: 50px;
+}
+/*container med de to bokse*/
+#container2 {
+   width: 75%;
+   height: 75%;
+   display: flex;
+   justify-content: center;   /* Horisontal centrering */
+   align-items: flex-start;    /* Flugter til toppen */
+   margin-top: 40px;
+}
+
+#boks5{
+    width: 70%;
+}
+/* Label styling */
+#oplysninger-form label {
+    font-size: 13px;
+    font-weight: 500;
+    margin-bottom: 6px;
+    display: block; /* Får label til ny linje */
+    color: #000;
+}
+#regler{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    width: 83%;
+    margin-bottom: 30px;
+}
+#regler p{
+    font-size: 14px;
+}
+#regler a{
+    color: #332823;
+    text-align: right;
+}
+/* Inputfelter */
+#oplysninger-form input[type="text"],
+#oplysninger-form input[type="email"],
+#oplysninger-form input[type="tel"] {
+    width: 80%;
+    padding: 10px;
+    border: 1px solid #d9ccc4;
+    border-radius: 8px;
+    margin-bottom: 18px;
+    background-color: #fff;
+}
+
+/* Postnummer + by ligger side by side */
+.row {
+    display: flex
+}
+
+.row div {
+    width: 44%;
+}
+
+/* Checkbox-linje */
+.accept {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 10px 0 20px 0;
+}
+
+.accept input {
+    width: 18px;
+    height: 18px;
+}
+
+
+#oplysninger-form button:hover {
+    background-color: #C4913D;
+    color: white;
+}
+
+

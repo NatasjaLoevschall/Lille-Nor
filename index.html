@@ -21,7 +21,7 @@
     <nav class="navbar">
       <div class="navbar-container">
         <a href="index.html" class="navbar-logo">
-          <img src="images/lille-nor_laptop.svg" alt="">
+          <img src="images/lille-nor_laptop.svg" alt="Lille Nor logo">
         </a>
 
         <ul class="nav-links">
@@ -30,18 +30,28 @@
             <li><a href="#">HVEM ER VI</a></li>
             <li><a href="#">FAQ</a></li>
             <li><a href="#">GAVEKORT</a></li>
-            <li><a href="#" id="btn">BOOK DIN REOL</a></li>
+            <li><a href="booking.html" id="btn">BOOK DIN REOL</a></li>
         </ul>
 
         <div class="icons">
-        <a href="">
-          <img src="images/search_icon.svg" alt="søgefelt">
-        </a>
+        <!-- Søgeikon som knap -->
+            <button class="search-toggle" type="button">
+                <img src="images/search_icon.svg" alt="Søgeikon">
+            </button>
 
+        <!-- SELVE SØGE-BOKSEN -->
+        <div class="search-dropdown">
+            <form action="#" class="search-form">
+                <input type="text" placeholder="Søg på siden..." />
+                <button type="button" class="search-close">&times;</button>
+                </form>
+            </div>
+
+        <!-- Profil-ikon som før -->
         <a href="">
-          <img src="images/myprofile_icon.svg" alt="min profil">
+            <img src="images/myprofile_icon.svg" alt="Min profil">
         </a>
-      </div>
+</div>
 
       </div>
     </nav>
@@ -72,7 +82,7 @@
 
           <h1>Hej fra os</h1>
 
-          <img src="images/popup_img.jpg" id="popup-img" alt="">
+          <img src="images/popup_img.jpg" id="popup-img" alt="Billede af ejerne">
 
           <p>
           Vil du gerne blive klog på vores koncept og hvordan vi kan hjælpe dig?
@@ -107,7 +117,7 @@
           </div>
         </div>
         <!-- BI-BILLEDE -->
-        <img src="images/bi.svg" alt="En bi" class="ln-bee-image" />
+        <img src="images/bi.svg" alt="Et billede af en bi" class="ln-bee-image" />
       </section>
       <section class="reviews">
         <h2>Det siger vores kunder</h2>
@@ -265,18 +275,7 @@
         </button>
       </div>
       </section>
-    
-    <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive Footer Tutorial</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="footer.css"/>
-</head>
-<body>
+
     <footer>
         <div class="container">
             <div class="row">
@@ -333,9 +332,9 @@
                     <p>&#169; 2019  Lille Nor - Alle rettigheder forbeholdes <br> CVR: 38710494</p>
 
                     <div class="socialIcons">
-                    <a href="#"><img src="images/facebook.svg" alt=""></a>
-                    <a href="#"><img src="images/instagram.svg" alt=""></a>
-                    <a href="#"><img src="images/mail.svg" alt=""></a>
+                    <a href="#"><img src="images/facebook.svg" alt="Facebook ikon"></a>
+                    <a href="#"><img src="images/instagram.svg" alt="Instagram ikon"></a>
+                    <a href="#"><img src="images/mail.svg" alt="Main ikon"></a>
                     </div>
                 </div>
             </div>
