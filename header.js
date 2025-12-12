@@ -20,7 +20,42 @@ if (header && hero) {
   handleScroll(); // 
 }
 
-// Baseret på W3Schools' dropdown-toggle princip:
+// Booking system
+
+const trigger = document.querySelector("#baggrundscirkel2");
+
+if (header && trigger) {
+  let prevScrollPos = window.pageYOffset;
+
+  function hideShowHeaderFromSection() {
+    const currentScrollPos = window.pageYOffset;
+
+    // Før vi rammer baggrundscirkel2: header skal altid være synlig
+    const triggerPoint = trigger.offsetTop - header.offsetHeight;
+
+    if (currentScrollPos < triggerPoint) {
+      header.classList.remove("hide-on-scroll");
+      prevScrollPos = currentScrollPos;
+      return;
+    }
+
+    // Fra baggrundscirkel2 og ned: hide/show efter scrollretning
+    if (prevScrollPos > currentScrollPos) {
+      // scroller op
+      header.classList.remove("hide-on-scroll");
+    } else {
+      // scroller ned
+      header.classList.add("hide-on-scroll");
+    }
+
+    prevScrollPos = currentScrollPos;
+  }
+
+  window.addEventListener("scroll", hideShowHeaderFromSection);
+  hideShowHeaderFromSection();
+}
+
+// Baseret på W3Schools' dropdown-toggle princip - Søgeikon:
 
 const toggleBtn = document.querySelector(".search-toggle");
 const dropdown = document.querySelector(".search-dropdown");

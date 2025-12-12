@@ -232,7 +232,7 @@ header.scrolled {
   justify-content: center;
   align-items: center;
 
-  font-weight: 600;
+  font-weight: 500;
   background-color: #E4B66C;
   width: 200px;
   height: 50px;
@@ -320,6 +320,7 @@ header.scrolled {
   cursor: pointer;
   font-size: 16px;
   margin-top: 20px;
+  font-weight: 500;
 }
 
 #popup-img {
