@@ -1,15 +1,32 @@
 *{
     margin: 0;
     padding: 0;
-    font-family: 'Source Sans 3', sans-serif;
 }
 
 body {
     background-color: #FBF4EE;
     color: #332823;
+    font-family: 'Source Sans 3', sans-serif;
 }
 
-
+ #hero {
+    width: 100%;
+    height: 100vh;
+    background-image: url('images/bookingforside.png'); /*gør buen til baggrundsbillede*/
+    background-repeat: no-repeat;
+    background-size: cover; 
+    background-position: center;
+    display: flex;              
+    justify-content: center;   
+    align-items: center ;      
+}
+#hero h1 {
+    color: white;
+    font-size: 50px;
+    font-weight: 500;
+    text-align: center;
+    font-family: 'kalam', cursive;
+}
 /*Generelle CSS regler*/
 
 /*overskrift flexboks*/
@@ -22,7 +39,7 @@ body {
 }
 
 .overskrift h1{
-    font-size: 27px;
+    font-size: 30px;
     font-weight: 700;
     text-align: center;
 }
@@ -76,8 +93,8 @@ body {
 }
  #baggrundscirkel1 {
     width: 100%;
-    height: 100vh;
-    background-image: url('billeder/cirkel1.svg'); /*gør buen til baggrundsbillede*/
+    height: 105vh;
+    background-image: url('images/cirkel1.svg'); /*gør buen til baggrundsbillede*/
     background-repeat: no-repeat;
     background-size: cover; 
     background-position: center;
@@ -115,11 +132,11 @@ body {
   }
   
   .card h2 {
-    font-size: 22px;
+    font-size: 25px;
     margin-bottom: 25px;
   }
   .card p {
-    font-size: 15px;
+    font-size: 16px;
     color: #332823;
   }
   
@@ -219,7 +236,7 @@ body {
 }
 
 .kort1 h2 {
-    font-size: 24px;
+    font-size: 25px;
     margin-bottom: 6px;
     font-weight: 600;
     color: #3a2f2f;
@@ -286,7 +303,7 @@ body {
 #baggrundscirkel3{
     width: 100%;
     height: 100vh;
-    background-image: url('billeder/bue2.svg'); /*gør buen til baggrundsbillede*/
+    background-image: url('images/bue2.svg'); /*gør buen til baggrundsbillede*/
     background-repeat: no-repeat;
     background-size: cover; 
     background-position: center;
@@ -432,7 +449,7 @@ body {
 #baggrundscirkel4 {
     width: 100%;
     height: 100vh;
-    background-image: url('billeder/bue1.svg'); /*gør buen til baggrundsbillede*/
+    background-image: url('images/bue1.svg'); /*gør buen til baggrundsbillede*/
     background-repeat: no-repeat;
     background-size: cover; 
     background-position: center;
@@ -515,21 +532,12 @@ body {
 .optaget rect:hover, .optaget path:hover, .optaget polygon:hover {
     fill: #C38894; /* mørk rød farve ved hover */
 }
-/*boks 2 valgt stand*/
-#valgt-stand{
-    font-size: 18px;
-    font-weight: 500;
-    text-align: center;
-    padding: 20px;
-    margin-top: 40%;
-    font-family: 'Source Sans 3', sans-serif;
-}  
 
 /*baggrundsbillede2 flexboks*/
 #baggrundscirkel5 {
     width: 100%;
     height: 100vh;
-    background-image: url('billeder/bue2.svg'); /*gør buen til baggrundsbillede*/
+    background-image: url('images/bue2.svg'); /*gør buen til baggrundsbillede*/
     background-repeat: no-repeat;
     background-size: cover; 
     background-position: center;
@@ -607,15 +615,6 @@ body {
     color: white;
     gap: 15px;
 }
-
-#valgt-pris{
-    font-size: 18px;
-    font-weight: 500;
-    text-align: center;
-    padding: 20px;
-    margin-top: 40%;
-    font-family: 'Source Sans 3', sans-serif;
-}   
 
 
 /*indtast dine oplysninger sektion*/
