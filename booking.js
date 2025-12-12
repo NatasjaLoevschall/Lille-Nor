@@ -1,29 +1,3 @@
-// Find knappen der fører videre til næste sektion
-const btn = document.querySelector("#btn");
-
-// Find næste sektion (lejeperiode)
-const lejePeriode = document.getElementById("baggrundscirkel2");
-
-// Find alle knapper med class="btn"
-const pakkeKnapper = document.querySelectorAll(".btn");
-
-// Find sektionen de skal scrolle til
-const lejePeriode2 = document.getElementById("baggrundscirkel3");
-
-
-// Klik på knap1 → scroll til næste sektion
-btn.addEventListener("click", () => {
-
-    lejePeriode.scrollIntoView({ behavior: "smooth" });
-});
-
-
-// Giv ALLE knapperne et klik-event
-pakkeKnapper.forEach(knap => {
-    knap.addEventListener("click", () => {
-        lejePeriode2.scrollIntoView({ behavior: "smooth" });
-    });
-});
 
 // ---------------------------------------------------
 // STEP 1 – VÆLG REOLPAKKE
@@ -84,9 +58,43 @@ pakkeKort.forEach(kort => {
 });
 
 
+// ---------------------------------------------------
+// STEP 1 – VÆLG REOLPAKKE - FÅ KNAPPERNE TIL AT VIRKE 
+// ---------------------------------------------------
+
+// Find knappen der fører videre 
+const btn = document.querySelector("#btn");
+
+// Find næste sektion for "book basic" -> (lejeperiode)
+const lejePeriode = document.getElementById("baggrundscirkel2");
+
+// Find alle knapper med class="btn", som skal springe lejeperiode over, da de går direkte til kalenderen
+const pakkeKnapper = document.querySelectorAll(".btn");
+
+// Find sektionen de skal scrolle til (kalenderen)
+const lejePeriode2 = document.getElementById("baggrundscirkel3");
 
 
-// STEP 2 – VÆLG LEJEPERIODE 
+// Klik på btn (book basic) → scroll til næste sektion
+btn.addEventListener("click", () => {
+
+    lejePeriode.scrollIntoView({ behavior: "smooth" });
+});
+
+
+// Giv ALLE knapperne et klik-event
+pakkeKnapper.forEach(knap => {
+    knap.addEventListener("click", () => {
+        lejePeriode2.scrollIntoView({ behavior: "smooth" });
+    });
+});
+
+
+
+// ---------------------------------------------------
+// STEP 1 – VÆLG LEJEPERIODE
+// ---------------------------------------------------
+
 
 // Find alle periodekort
 const kort1 = document.querySelectorAll(".kort1");
@@ -321,24 +329,25 @@ visDecember();
 
 
 // --------------------------
-//  Stand sektion - step 4
+//  STEP 4 – VÆLG STAND
 // --------------------------
 
 
-// Find alle ledige stande (dem du kan klikke på)
+// Find alle ledige stande (dem du kan klikke på), og gem dem i den KONSTANSTE varible "ledigeStande"
 const ledigeStande = document.querySelectorAll('.ledig');
 
-// Hvor tallet skal skrives hen
-const valg4Felter = document.querySelectorAll('#valg4');
+// Find "valg4" feltet i den brune bokse "Dine Valg", for at vise valgt stand
+const valg4Felter = document.querySelectorAll('#valg4'); 
 
-// Find knappen
+
+// Find knappen "Vælg stand", der fører videre til næste sektion
 const knap3 = document.querySelector("#knap3");
 
-// Find baggrundscirkel5 (sektion med tilkøb)
+// Find baggrundscirkel5 -> næste sektion med tilkøb, som knappen skal føre til
 const tilkobSektion = document.getElementById("baggrundscirkel5");
 
 
-// Klik på en stand
+// Klik på en stand, ved at køre funktionen for hver ledige stand
 ledigeStande.forEach(function(stand) {
 
     stand.addEventListener('click', function() {
