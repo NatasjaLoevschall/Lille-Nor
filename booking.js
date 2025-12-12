@@ -422,3 +422,9 @@ knap4.addEventListener("click", () => {
 
     oplysningsSektion.scrollIntoView({ behavior: "smooth" });
 });
+
+
+// Klik på videre til betaling knap → fører dig videre til betalingssiden.
+document.getElementById("betalingKnap").addEventListener("click", function() {
+    window.location.href = "betaling.html";
+});

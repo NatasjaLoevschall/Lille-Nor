@@ -355,11 +355,34 @@ header.scrolled {
     font-size: 16px;
     
 }
-.knap button:hover{
+.betalingsknap button:hover{
     background-color: #C4913D;
     color: white;
     cursor: pointer;
 }
+
+.betalingsknap{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    
+}
+.betalingsknap button{
+    background-color: #E4B66C;
+    width: 200px;
+    height: 50px;
+    border-radius: 10px;
+    border: none;
+    font-size: 16px;
+    
+}
+.betalingsknap button:hover{
+    background-color: #C4913D;
+    color: white;
+    cursor: pointer;
+}
+
  #baggrundscirkel1 {
     width: 100%;
     height: 105vh;
