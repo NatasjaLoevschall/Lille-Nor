@@ -312,7 +312,7 @@ header.scrolled {
 }
 
 #popup-img {
-  width: 60%;         /* eller 50%, 70% osv */
+  max-width: 60%;         /* eller 50%, 70% osv */
   height: auto;       /* bevarer proportioner */
   border-radius: 10px; /* valgfrit */
   margin: 20px 0;
