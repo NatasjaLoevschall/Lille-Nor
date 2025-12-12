@@ -248,6 +248,11 @@ body {
     height: 100%; /* hvis nødvendigt */
     padding: 30px;
 }
+.tekstboks h2 {
+    font-weight: 600;
+    margin-bottom: 20px;
+    padding-left: 10px;
+}
 
 .valg-linje {
     display: flex;
