@@ -63,11 +63,63 @@ header.scrolled {
 .icons {
   display: flex;
   gap: 15px;
+
+  position: relative;
 }
 
 .icons img {
   height: 25px;
   cursor: pointer;
+}
+
+/* Knap til søgning (uden standard-knap-styling) */
+.search-toggle {
+  border: none;
+  background: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+/* Selve dropdown-boksen – skjult som udgangspunkt */
+.search-dropdown {
+  position: absolute;
+  top: 170%;          /* lige under ikonerne */
+  right: 50%;        /* justér efter behov */
+  background: #FBF4EE;
+  padding: 8px 10px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+  display: none;      /* skjult til at starte med */
+  z-index: 1500;
+}
+
+.search-dropdown.open {
+  display: block;     /* vises når jeg tilføjer .open i JS */
+}
+
+/* Formularen indeni */
+.search-form {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.search-form input {
+  padding: 6px 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  min-width: 200px;
+  font-size: 14px;
+}
+
+/* Luk-knap (kryds) */
+.search-close {
+  background: none;
+  border: none;
+  font-size: 25px;
+  line-height: 1;
+  cursor: pointer;
+  color: #332823;
 }
 
 .navbar-container {
@@ -181,7 +233,6 @@ header.scrolled {
   padding: 10px 15px;
   border-radius: 10px;
   color: #332823;
-
 }
 
 
