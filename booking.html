@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forside</title>
+    <link rel="stylesheet" href="booking.css">
+    <script src="booking.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,
+    300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,
+    800;1,900&family=Darker+Grotesque:wght@300..900&family=Krub:ital,wght@0,200;0,300;0,
+    400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Montserrat:ital,wght@0,
+    100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&
+    family=Oxanium:wght@200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,
+    700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Source+Sans+3:ital,
+    wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!--Vælg din reolpakke - step 1-->
+<div id="baggrundscirkel1"> <!--Buet baggrund container-->
+    <section class="container1">
+    <div class="overskrift">
+        <img src="images/nummer1.svg" alt="01 trin" class="step-icon">
+        <h1>Vælg din reolpakke</h1>
+    </div>
+    <div class="card-wrapper">
+
+        <!-- BASIC -->
+        <div class="card" data-package="basic">
+            <h2>Basic</h2>
+
+            <div class="icon-circle">
+                <img src="images/handup-brown.svg"
+                     data-default="images/handup-brown.svg"
+                     data-selected="images/handup-brown.svg"
+                     class="icon">
+            </div>
+
+            <p class="desc">
+                Du står for det hele <br>
+                Reol skal passes løbende <br>
+                Reolleje + 18% kommission
+            </p>
+            <div class="btn-container">
+            <button id="btn"
+                    data-default="Book Basic"
+                    data-selected="Basic valgt">
+                Book Basic
+            </button>
+            </div>
+        </div>
+
+        <!-- EASY PEASY -->
+        <div class="card" data-package="easy">
+            <h2>Easy Peasy</h2>
+
+            <div class="icon-circle">
+                <img src="images/knips-brun.svg"
+                     data-default="images/knips-brun.svg"
+                     data-selected="images/knips-brun.svg"
+                     class="icon">
+            </div>
+
+            <p class="desc">
+                Vi står for det praktiske <br>
+                3 uger for 995 kr. <br>
+                + 18% kommission
+            </p>
+
+            <div class="btn-container">
+            <button class="btn"
+                    data-default="Book Easy Peasy"
+                    data-selected="Easy Peasy valgt">
+                Book Easy Peasy
+            </button>
+            </div>
+        </div>
+
+        <!-- SIMPLE REUSE -->
+        <div class="card" data-package="reuse">
+            <h2>Simple Reuse</h2>
+
+            <div class="icon-circle">
+                <img src="images/handshake-brun.svg"
+                     data-default="images/handshake-brun.svg"
+                     data-selected="images/handshake-brun.svg"
+                     class="icon">
+            </div>
+
+            <p class="desc">
+                Vi står for alt <br>
+                Håndteringsgebyr på 139 kr. <br>
+                3 uger + vi deler salget 50:50
+            </p>
+            <div class="btn-container">
+            <button class="btn"
+                    data-default="Book Simple Reuse"
+                    data-selected="Simple Reuse valgt">
+                Book Simple Reuse
+            </button>
+            </div>
+        </div>
+
+    </div>
+</section>
+</div>
+
+<!--Vælg din lejeperiode - step 2-->
+<div id="baggrundscirkel2"> <!--Buet baggrund container-->
+            <div class="overskrift">
+                <img src="images/to.svg" alt="et billede af tallet to, der indikerer sektion to i bookingflowet">
+                <h1 class="vælgdinlejeperiode-overskrift">Vælg din lejeperiode</h1>
+            </div>
+            <div class="container"> 
+                <div id="boks">
+                    <div class="kort1">
+                        <h2>1 uge</h2>
+                        <p class="pris">250,-</p>
+                    </div>
+                    <div class="kort1">
+                        <h2>2 uger</h2>
+                        <p class="pris">395,-</p>
+                    </div>
+                    <div class="kort1">
+                        <h2>3 uger</h2>
+                        <p class="pris">550,-</p>
+                    </div>
+                    <div class="kort1">
+                        <h2>4 uger</h2>
+                        <p class="pris">675,-</p>
+                    </div>
+                    <div class="kort1">
+                        <h2>5 uger</h2>
+                        <p class="pris">800,-</p>
+                    </div> 
+                     <div class="kort1">
+                        <h2>6 uger</h2>
+                        <p class="pris">975,-</p>
+                    </div> 
+                     <div class="kort1">
+                        <h2>7 uger</h2>
+                        <p class="pris">1000,-</p>
+                    </div> 
+                     <div class="kort1">
+                        <h2>8 uger</h2>
+                        <p class="pris">1150,-</p>
+                    </div> 
+                </div>
+
+                  <!-- HØJRE BRUN BOKS - step 2-->
+                  <div class="boksogknap">
+                    <div class="boks"> <!--Boks til "Dine valg"-->
+                 
+                    <div class="tekstboks">
+                    <h2>DINE VALG</h2>
+
+                    <div class="valg-linje">
+                        <img src="images/enhvid.svg" alt="01 ikon" class="valg-ikon">
+                        <p id="valg1">Ingen reolleje valgt</p>
+                    </div>
+
+                    <div class="valg-linje">
+                        <img src="images/tohvid.svg" alt="02 ikon" class="valg-ikon">
+                        <p id="valg2">Ingen periode valgt</p>
+                    </div>
+
+                    <div class="prislinje">
+                        <p>PRIS</p>
+                        <p id="beloeb">0 kr.</p>
+                    </div>
+                    </div>
+                    </div>
+
+                <div class="knap">
+                    <button id="knap1">Vælg lejeperiode</button>
+                </div>
+            </div>
+            </div>
+        </div>
+
+        <!--Vælg din startdato - step 3-->
+        <div id="baggrundscirkel3"> <!--Buet baggrund container-->
+        <div class="overskrift">
+            <img src="images/tre.svg" alt="">
+            <h1 class="vælgdinlejeperiode-overskrift">Vælg din start dato</h1>
+        </div>
+
+        <div class="container"> <!--Hovedcontainer for boks1 og boks2-->
+            <div id="boks">
+                <div class="kalender">
+
+                    <!-- Mørk top med måned -->
+                    <div class="kalender-top">
+                        <span id="decembermåned" class="pil">&lt;</span>
+                        <h2 id="maanedTitel">DECEMBER 2025</h2>
+                        <span id="januarmåned" class="pil">&gt;</span>
+                    </div>
+
+                    <!-- Ugedage -->
+                    <div class="kalender-ugedage">
+                        <p>MAN</p>
+                        <p>TIR</p>
+                        <p>ONS</p>
+                        <p>TOR</p>
+                        <p>FRE</p>
+                        <p>LØR</p>
+                        <p>SØN</p>
+                    </div>
+                    
+                    <!-- Datoer – udfyldes af JavaScript -->
+                    <div class="kalender-dage">
+                        <!-- JS (visDecember / visJanuar) indsætter dagene her -->
+                    </div>
+                </div>
+                            
+                <div id="standinfo"> 
+                    <img src="images/ledig.svg" alt="grøn cirkel der indikerer ledige stande">
+                    <p>Ledige stande</p>
+                    <img src="images/optaget.svg" alt="rød cirkel der indikerer optaget stande">
+                    <p>Optaget stande</p>
+                </div> 
+            </div>
+                
+                  <!-- HØJRE BRUN BOKS - step 3-->
+                  <div class="boksogknap">
+                    <div class="boks"> <!--Boks til "Dine valg"-->
+                 
+                    <div class="tekstboks">
+                    <h2>DINE VALG</h2>
+
+                    <div class="valg-linje">
+                        <img src="images/enhvid.svg" alt="01 ikon" class="valg-ikon">
+                        <p id="valg1">Ingen reolleje valgt</p>
+                    </div>
+
+                    <div class="valg-linje">
+                        <img src="images/tohvid.svg" alt="02 ikon" class="valg-ikon">
+                        <p id="valg2">Ingen periode valgt</p>
+                    </div>
+
+                    <div class="valg-linje">
+                        <img src="images/trehvid.svg" alt="03 ikon" class="valg-ikon">
+                        <p id="valg3">Ingen startdato valgt</p>
+                    </div>
+
+                    <div class="prislinje">
+                        <p>PRIS</p>
+                        <p id="beloeb">0 kr.</p>
+                    </div>
+                    </div>
+                    </div>
+
+                    <div class="knap">
+                        <button id="knap2">Vælg dato</button>
+                    </div>
+                </div>
+        </div>
+        </div>
+
+    <!--Vælg din stand - step 4-->
+    <div id="baggrundscirkel4"> <!--Buet baggrund container-->
+        <div class="overskrift">
+            <img src="images/fire.svg" alt="ikon med tallet fire, der indikerer sektion fire i bookingflowet">
+            <h1 class="tilkob-overskrift">Vælg din stand</h1>
+        </div>
+        <div class="container"> <!--Hovedcontainer for boks1 og boks2-->
+            <div id="boks1">
+                <!--Stand SVG kode-->
+            <?xml version="1.0" encoding="UTF-8"?>
+            <svg id="stand" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 923.44 526.74">
+                <defs>
+                    <style>
+                    .cls-1, .cls-2 {
+                    font-family: 'Source Sans 3', sans-serif;
+                    font-size: 34.56px;
+                    font-variation-settings: 'wdth' 100, 'wght' 400;
+                    }
+
+                    .cls-3 {
+                    letter-spacing: -.01em;
+                    }
+
+                    .cls-4 {
+                    letter-spacing: -.02em;
+                    }
+
+                    .cls-5 {
+                    letter-spacing: -.01em;
+                    }
+
+                    .cls-6 {
+                    letter-spacing: 0em;
+                    }
+
+                    .cls-7 {
+                    fill: #97918e;
+                    stroke: #696969;
+                    }
+
+                    .cls-7, .cls-8, .cls-9 {
+                    stroke-miterlimit: 10;
+                    }
+
+                    .cls-10 {
+                    fill: #606060;
+                    font-family: 'Source Sans 3', sans-serif;
+                    font-size: 20.74px;
+                    }
+
+                    .cls-8 {
+                    stroke: #97918e;
+                    }
+
+                    .cls-9 {
+                    fill: #e2f4db;
+                    stroke: #88c388;
+                    }
+
+                    .cls-11 {
+                    letter-spacing: 0em;
+                    }
+
+                    .cls-2 {
+                    fill: #fff;
+                    }
+                    </style>
+                </defs>
+                <g class="ledig">
+                    <rect class="cls-9" x=".5" y="165.22" width="67.26" height="130.4"/>
+                    <text class="cls-1" transform="translate(24.74 244.54)"><tspan x="0" y="0">2</tspan></text>
+                </g>
+                <g class="ledig">
+                    <rect class="cls-9" x=".5" y="328.57" width="67.26" height="131.78"/>
+                    <text class="cls-1" transform="translate(26.47 401.79)"><tspan x="0" y="0">1</tspan></text>
+                </g>
+                <g class="ledig">
+                    <rect class="cls-9" x=".5" y="1.87" width="67.26" height="130.4"/>
+                    <text class="cls-1" transform="translate(26.47 76.92)"><tspan x="0" y="0">3</tspan></text>
+                </g>
+                <g class="optaget">
+                    <rect class="cls-7" x="99.33" y=".5" width="131.78" height="67.26"/>
+                    <text class="cls-2" transform="translate(154.34 45.82)"><tspan x="0" y="0">4</tspan></text>
+                </g>
+                <g class="optaget">
+                    <rect class="cls-7" x="264.05" y=".5" width="130.4" height="67.26"/>
+                    <text class="cls-2" transform="translate(318.5 44.09)"><tspan x="0" y="0">5</tspan></text>
+                </g>
+                <g class="optaget">
+                    <rect class="cls-7" x="428.78" y="1.87" width="65.89" height="130.4"/>
+                    <text class="cls-2" transform="translate(451.56 76.92)"><tspan x="0" y="0">6</tspan></text>
+                </g>
+                <g class="optaget">
+                    <rect class="cls-7" x="427.4" y="166.59" width="65.89" height="130.4"/>
+                    <text class="cls-2" transform="translate(451.56 242.81)"><tspan x="0" y="0">7</tspan></text>
+                </g>
+                <g class="ledig">
+                    <rect class="cls-9" x="527.61" y="229.74" width="130.4" height="67.26"/>
+                    <text class="cls-1" transform="translate(584.62 275.64)"><tspan x="0" y="0">8</tspan></text>
+                </g>
+                <g class="ledig">
+                    <rect class="cls-9" x="690.96" y="229.74" width="131.78" height="67.26"/>
+                    <text class="cls-1" transform="translate(748.78 273.91)"><tspan x="0" y="0">9</tspan></text>
+                </g>
+                <g class="ledig">
+                    <rect class="cls-9" x="855.68" y="229.74" width="65.89" height="131.78"/>
+                    <text class="cls-1" transform="translate(869.74 310.2)"><tspan x="0" y="0">10</tspan></text>
+                </g>
+                <g class="optaget">
+                    <polygon class="cls-7" points="922.94 394.46 922.94 524.18 920.88 526.24 855.68 526.24 855.68 394.46 922.94 394.46"/>
+                    <text class="cls-2" transform="translate(871.47 470.91)"><tspan class="cls-5" x="0" y="0">1</tspan><tspan x="13.1" y="0">1</tspan></text>
+                </g>
+                <g class="ledig">
+                    <path class="cls-9" d="M822.74,394.46v130.4c-1.35-.45-2.98,1.37-3.43,1.37h-63.83v-131.78h67.26Z"/>
+                    <text class="cls-1" transform="translate(771.24 469.18)"><tspan x="0" y="0">12</tspan></text>
+                </g>
+                <g class="ledig">
+                    <rect class="cls-9" x="655.27" y="394.46" width="67.26" height="131.78"/>
+                    <text class="cls-1" transform="translate(671.02 469.18)"><tspan class="cls-11" x="0" y="0">1</tspan><tspan x="13.38" y="0">3</tspan></text>
+                </g>
+                <g class="ledig">
+                    <rect class="cls-9" x="491.92" y="458.98" width="130.4" height="65.89"/>
+                    <text class="cls-1" transform="translate(536.23 502.01)"><tspan class="cls-4" x="0" y="0">1</tspan><tspan x="12.89" y="0">4</tspan></text>
+                </g>
+                <g class="ledig">
+                    <rect class="cls-9" x="327.2" y="458.98" width="130.4" height="65.89"/>
+                    <text class="cls-1" transform="translate(372.07 502.01)"><tspan class="cls-3" x="0" y="0">1</tspan><tspan class="cls-6" x="13.13" y="0">5</tspan></text>
+                </g>
+                <g class="ledig">
+                    <polygon class="cls-9" points="329.94 167.97 331.32 299.74 264.05 299.74 264.05 167.97 329.94 167.97"/>
+                    <text class="cls-1" transform="translate(280.48 242.81)"><tspan x="-3" y="0">16</tspan></text>
+                </g>
+                <g>
+                    <line class="cls-8" x1="147.28" y1="496.86" x2="147.28" y2="526.24"/>
+                    <line class="cls-8" x1="270" y1="496.86" x2="270" y2="526.24"/>
+                    <text class="cls-10" transform="translate(160.15 517.91)"><tspan x="0" y="0">INDGANG</tspan></text>
+                </g>
+            </svg>
+            <div id="standinfo"> 
+                <img src="images/ledig.svg" alt="grøn cirkel der indikerer ledige stande">
+                <p>Ledige stande</p>
+                <img src="images/optaget.svg" alt="rød cirkel der indikerer optaget stande">
+                <p>Optaget stande</p>
+            </div> 
+            </div>
+
+
+                <!-- HØJRE BRUN BOKS - step 4-->
+                  <div class="boksogknap">
+                    <div class="boks"> <!--Boks til "Dine valg"-->
+                 
+                    <div class="tekstboks">
+                    <h2>DINE VALG</h2>
+
+                    <div class="valg-linje">
+                        <img src="images/enhvid.svg" alt="01 ikon" class="valg-ikon">
+                        <p id="valg1">Ingen reolleje valgt</p>
+                    </div>
+
+                    <div class="valg-linje">
+                        <img src="images/tohvid.svg" alt="02 ikon" class="valg-ikon">
+                        <p id="valg2">Ingen periode valgt</p>
+                    </div>
+
+                      <div class="valg-linje">
+                        <img src="images/trehvid.svg" alt="03 ikon" class="valg-ikon">
+                        <p id="valg3">Ingen startdato valgt</p>
+                    </div>
+    
+                    <div class="valg-linje">
+                        <img src="images/firehvid.svg" alt="04 ikon" class="valg-ikon">
+                        <p id="valg4">Ingen stand valgt</p> <!-- <-- ændret id -->
+                    </div>
+
+                    <div class="prislinje">
+                        <p>PRIS</p>
+                        <p id="beloeb">0 kr.</p>
+                    </div>
+                    </div>
+                    </div>
+
+                    <div class="knap">
+                    <button id="knap3">Vælg stand</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Vælg dine tilkøb - step 5-->
+    <div id="baggrundscirkel5"> <!--Buet baggrund container-->
+        <div class="overskrift">
+            <img src="images/fem.svg" alt="ikon med tallet fem, der indikerer sektion fem i bookingflowet">
+            <h1 class="tilkob-overskrift">Vælg dine tilkøb</h1>
+        </div>
+        <div class="container"> <!--Hovedcontainer for boks1 og boks2-->
+            <div id="boks3">
+                <div class="kort">
+                    <h3>Opsætning af reol</h3>
+                    <img src="images/highfive-brun.svg" alt="ikon der viser en hånd give highfive med en anden hånd">
+                    <p class="pris">275,-</p>
+                    <span class="note">pr. reol</span> <!--span bruges til ekstra små tekststykker-->
+                </div>
+                <div class="kort">
+                    <h3>Nedtagning af din reol</h3>
+                    <img src="images/highfive-brun.svg" alt="ikon der viser en hånd give highfive med en anden hånd">
+                    <p class="pris">250,-</p>
+                    <span class="note">pr. reol</span> <!--span bruges til ekstra små tekststykker-->
+                </div>
+                <div class="kort">
+                    <h3>Regelmæssig oprydning af din reol</h3>
+                    <img src="images/highfive-brun.svg" alt="ikon der viser en hånd give highfive med en anden hånd">
+                    <p class="pris">45,-</p>
+                    <span class="note">pr. uge</span>
+                </div>
+                <div class="kort">
+                    <h3>Forsendelse af prismærker</h3>
+                    <img src="images/highfive-brun.svg" alt="ikon der viser en hånd give highfive med en anden hånd">
+                    <p class="pris">35,-</p>
+                    <span class="note">(levering 6 hverdage)</span>
+                </div>
+                <div class="kort">
+                    <h3>Ønsker ingen tilkøb</h3>
+                    <img src="images/thumpsdown-brun.svg" alt="ikon der viser en tommelfinger nedad">
+                    <p class="pris gratis">Gratis</p>
+                </div> 
+            </div>
+
+            <!-- HØJRE BRUN BOKS - step 5-->
+            <div class="boksogknap">
+                <div class="boks"> <!--Boks til "Dine valg"-->
+
+                    <div class="tekstboks">
+                        <h2>DINE VALG</h2>
+
+                        <div class="valg-linje">
+                            <img src="images/enhvid.svg" alt="01 ikon" class="valg-ikon">
+                            <p id="valg1">Ingen reolleje valgt</p>
+                        </div>
+
+                        <div class="valg-linje">
+                            <img src="images/tohvid.svg" alt="02 ikon" class="valg-ikon">
+                            <p id="valg2">Ingen periode valgt</p>
+                        </div>
+
+                        <div class="valg-linje">
+                            <img src="images/trehvid.svg" alt="03 ikon" class="valg-ikon">
+                            <p id="valg3">Ingen startdato valgt</p>
+                        </div>
+    
+                        <div class="valg-linje">
+                            <img src="images/firehvid.svg" alt="04 ikon" class="valg-ikon">
+                            <p id="valg4">Ingen stand valgt</p> 
+                        </div>
+
+                        <div class="valg-linje">
+                            <img src="images/femhvid.svg" alt="05 ikon" class="valg-ikon">
+                            <p id="valg5">Ingen tilkøb valgt</p>
+                        </div>
+
+                        <div class="prislinje">
+                            <p>PRIS</p>
+                            <p id="beloeb">0 kr.</p>
+                        </div>
+                    </div>
+                </div>
+                    <div class="knap">
+                        <button id="knap4">Vælg tilkøb</button>
+                    </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Container for sektion med indtastning af oplysninger - step 6-->
+
+    <div id="container-oplysninger"> 
+        <div id="overskrift2">
+            <img src="images/seks.svg" alt="ikon med tallet seks, der indikerer sektion seks i bookingflowet">
+            <h1>Indtast dine oplysninger</h1>
+        </div>
+        <div id="container2"> <!--Hovedcontainer for boks1 og boks2-->
+                <div id="boks5">
+                    <form id="oplysninger-form">
+                        <div id="regler">
+                            <p>Allerede bruger?
+                                <a href="#"><br>Log ind her</a>
+                            </p>
+                            <p>Skal udfyldes *</p>
+                        </div>
+                      
+                        <label for="navn">For- og efternavn *</label>
+                        <input type="text">
+
+                        <label for="email">E-mail *</label>
+                        <input type="email">
+
+                        <label for="email2">Gentag E-mail *</label>
+                        <input type="email">
+
+                        <label for="telefon">Telefonnummer *</label>
+                        <input type="tel">
+
+                        <label for="adresse">Adresse *</label>
+                        <input type="text">
+
+                        <div class="row">
+                            <div>
+                                <label for="postnr">Postnummer *</label>
+                                <input type="text">
+                            </div>
+
+                            <div>
+                                <label for="by">By *</label>
+                                <input type="text">
+                            </div>
+                        </div>
+
+                        <div class="accept">
+                            <input type="checkbox">
+                            <label for="betingelser">Jeg har læst og acceptere lejebetingelserne (Klik her for at læse dem)</label>
+                        </div>
+                    </form>
+                </div>
+
+                            <!-- HØJRE BRUN BOKS - step 5-->
+            <div class="boksogknap">
+                <div class="boks"> <!--Boks til "Dine valg"-->
+
+                    <div class="tekstboks">
+                        <h2>DINE VALG</h2>
+
+                        <div class="valg-linje">
+                            <img src="images/enhvid.svg" alt="01 ikon" class="valg-ikon">
+                            <p id="valg1">Ingen reolleje valgt</p>
+                        </div>
+
+                        <div class="valg-linje">
+                            <img src="images/tohvid.svg" alt="02 ikon" class="valg-ikon">
+                            <p id="valg2">Ingen periode valgt</p>
+                        </div>
+
+                        <div class="valg-linje">
+                            <img src="images/trehvid.svg" alt="03 ikon" class="valg-ikon">
+                            <p id="valg3">Ingen startdato valgt</p>
+                        </div>
+    
+                        <div class="valg-linje">
+                            <img src="images/firehvid.svg" alt="04 ikon" class="valg-ikon">
+                            <p id="valg4">Ingen stand valgt</p> 
+                        </div>
+
+                        <div class="valg-linje">
+                            <img src="images/femhvid.svg" alt="05 ikon" class="valg-ikon">
+                            <p id="valg5">Ingen tilkøb valgt</p>
+                        </div>
+
+                        <div class="prislinje">
+                            <p>PRIS</p>
+                            <p id="beloeb">0 kr.</p>
+                        </div>
+                    </div>
+                </div>
+                    <div class="knap">
+                        <button><a href="#"></a>Videre til betaling</button>
+                    </div>
+            </div>
+                    <!--HVAD BRUGES DENNE TIL?
+                    
+                    <p id="valgt-oplys"></p> -->
+                
+            </div>
+        </div>
+    </div>
+</body>
+</html>
