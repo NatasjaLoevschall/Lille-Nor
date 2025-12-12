@@ -1,0 +1,56 @@
+body {
+  font-family: 'Source Sans 3', sans-serif;
+  background: #EDEDED;
+  text-align: center; /* centrer alt som udgangspunkt */
+}
+
+#box {
+  background: white;
+  width: 30%;
+  margin: 60px auto;
+  padding: 20px;
+  border-radius: 18px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+}
+
+#betalBtn {
+  width: 100%;
+  padding: 14px 0;
+  margin-top: 18px;
+  background: #004FFA;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+
+#godkendt {
+  display: none; /* skjult indtil man klikker */
+  margin-top: 20px;
+}
+
+#godkendtikon {
+  width: 70px;
+  margin-bottom: 6px;
+}
+
+#annullerBtn {
+  background: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  cursor: pointer;
+  display: block;      /* gør den til et blok-element */
+  margin: 30px auto 0; /* auto = centrerer den horisontalt */
+}
+
+
+#annullerBtn .annullerikon{
+  color: #e35151;        /* ikonet er rødt */
+  margin-right: 8px;
+  font-size: 18px;
+}
