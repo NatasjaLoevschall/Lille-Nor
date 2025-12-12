@@ -219,20 +219,31 @@ header.scrolled {
 }
 
 /* Tekst ovenpå overlayet */
-.hero-text {
+.hero-text a{
   position: absolute;
   top: 70%;
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
   text-align: center;
-  font-size: 18px;
+  font-size: 16px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   font-weight: 600;
   background-color: #E4B66C;
-  padding: 10px 15px;
+  width: 200px;
+  height: 50px;
+
   border-radius: 10px;
   color: #332823;
+}
+
+.hero-text a:hover {
+  background-color: #C4913D;
+  color: #ffffff;
 }
 
 
@@ -391,19 +402,6 @@ header.scrolled {
     color: #332823;
   }
   
-  /* Knap */
-  .ln-btn {
-    margin-top: 2rem;
-    padding: 0.9rem 2.8rem;
-    border-radius: 999px;
-    border: none;
-    cursor: pointer;
-    font-size: 1rem;
-    font-weight: 500;
-    background-color: #e2b15d;
-    color: #332823;
-    transition: transform 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease;
-  }
   
   .ln-btn:hover {
     transform: translateY(-2px);
