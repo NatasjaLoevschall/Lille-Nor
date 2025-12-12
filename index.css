@@ -276,7 +276,7 @@ header.scrolled {
   border-radius: 14px;
   position: relative;
   box-shadow: 0 10px 30px #332823;
-  width: 90%;
+  width: 100%;
   padding: 50px;
 
   display: flex;
