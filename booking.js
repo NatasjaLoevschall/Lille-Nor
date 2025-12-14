@@ -347,35 +347,50 @@ const knap3 = document.querySelector("#knap3");
 const tilkobSektion = document.getElementById("baggrundscirkel5");
 
 
-// Klik på en stand, ved at køre funktionen for hver ledige stand
+// Klik på en stand, ved at køre funktionen for hver ledige stand (derfor "stand", som er en
+//variabel der repræsenterer hver enkelt stand i listen)
 ledigeStande.forEach(function(stand) {
 
+    //addEventListener lytter efter et klik på den enkelte stand
     stand.addEventListener('click', function() {
-
+ 
         // Find tallet
-        const tekst = this.textContent;
-        const fundneTal = tekst.match(/\d+/g);
-        const renTal = fundneTal ? fundneTal.join("") : "";
+        const tekst = this.textContent; //"This" er det element der klikkes på og text content er al teksten i det element
+        const fundneTal = tekst.match(/\d+/g); //Bruger regex til at finde tal i teksten
+        const renTal = fundneTal ? fundneTal.join("") : ""; //Hvis der er fundet tal, join dem sammen, ellers sæt til tom streng
 
-        // Sæt teksten i ALLE valg4 felter
+        // Sæt teksten i ALLE valg4 felter i "Dine valg" boksen
         valg4Felter.forEach(function(felt) {
             felt.textContent = "Valgt stand: " + renTal;
         });
 
         // Vis visuelt valgt stand
         ledigeStande.forEach(function(s) {
-            s.classList.remove('valgt');
+            s.classList.remove('valgt'); //Fjerner styling fra CSS fra alle stande, så kun den klikkede får den
         });
-        this.classList.add('valgt');
+        this.classList.add('valgt'); //Tilføjer styling fra CSS til den klikkede stand
+
+        //DETTE STÅR I CSS
+
+        //.valgt rect,
+        //.valgt path,
+        //.valgt polygon {
+            //fill: #88C388 !important;  /* permanent mørk grøn */
+            //transition: 0.2s ease;
+        //}
+
+        //.valgt text {
+        //    fill: white !important; /* hvid tekst */
+        //}
     });
 });
 
 
 
-// Klik på knap1 → scroll til næste sektion
-knap3.addEventListener("click", () => {
+// Klik på knap3 "Vælg Stand" → scroll til næste sektion (tilkøb)
+knap3.addEventListener("click", () => { //Arrow function () => {} -> Samme som function(), bare kortere
 
-    tilkobSektion.scrollIntoView({ behavior: "smooth" });
+    tilkobSektion.scrollIntoView({ behavior: "smooth" }); //Scroller siden, så elementet kommer i view (Smooth Gør scroll animeret uden øjeblikkelig jump)
 });
 
 
@@ -384,31 +399,38 @@ knap3.addEventListener("click", () => {
 //  Tilkøb sektion - step 5
 // --------------------------
 
-// Find alle kort i tilkøb
+// Find alle kort i tilkøbsektionen
 const kort = document.querySelectorAll('.kort');
+
+// Find valg5 feltet i højre boks hvor tilkøbsvalget skal vises
 const valg5 = document.getElementById('valg5');
 
-// Find knap4
+// Find knap4 "Vælg tilkøb" 
 const knap4 = document.querySelector("#knap4");
 
-// Find baggrundscirkel3 (sektion med tilkøb)
+// Find containeren for oplysningssektionen (næste sektion)
 const oplysningsSektion = document.getElementById("container-oplysninger");
 
+
 // Klik på kort
-kort.forEach(k => {
+kort.forEach(k => { //k er parameteren (ét kort ad gangen).=> “giver” funktionskroppen. { ... } blokken af kode der køres pr. kort.
 
     k.addEventListener('click', () => {
 
-        const pris = k.querySelector('.pris').textContent;
-        const tal = pris.match(/\d+/g);
-        const renPris = tal ? tal.join("") : 0;
+        const pris = k.querySelector('.pris').textContent; //søger inde i kortet k efter første element med class .pris.
+        //.textContent: henter ren tekst fra elementet.
 
-    // Sæt teksten i ALLE valg5 felter
+        const tal = pris.match(/\d+/g); //søger efter tal
+        const renPris = tal ? tal.join("") : 0; //tal ? A : B betyder: hvis tal er “truthy” (ikke null) brug tal.join("") 
+        // -> tal.join samler array elementer uden mellemrum: fx. 1250 ellers brug 0
+
+
+    // Sæt teksten i ALLE valg5 felter -> finder id valg5 og for hver overskrives teksten til fx. Valg af køb: 250 kr.
     document.querySelectorAll('#valg5').forEach(felt => {
     felt.textContent = "Valg af tilkøb: " + renPris + " kr.";
 });
 
-        // Fjern valgt fra alle kort
+        // Fjern valgt fra alle kort -> fjerner CSS-klassen valgtkort (så ingen “hænger fast” som valgt).
         kort.forEach(kortEl => kortEl.classList.remove('valgtkort'));
 
         // Tilføj valgt til det kort du klikkede på

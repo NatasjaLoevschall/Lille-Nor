@@ -403,11 +403,11 @@ header.scrolled {
     color: #332823;
   }
   
-  
   .ln-btn:hover {
     transform: translateY(-2px);
     box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
     background-color: #d59f49;
+
   }
   
   /* BI + FLYVESTI (ét billede) */
