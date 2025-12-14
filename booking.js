@@ -3,13 +3,13 @@
 // STEP 1 – VÆLG REOLPAKKE
 // ---------------------------------------------------
 
-// Find alle pakke-kort (Basic, Easy Peasy, Simple Reuse)
+// Find alle pakke-kort (Basic, Easy Peasy, Simple Reuse) - der er brugt querySelectorAll, da der er flere kort (vi har brugt en classi HTML)
 const pakkeKort = document.querySelectorAll('.card');
 
-// Find det felt hvor teksten skal stå i - højre boks
+// Find det felt hvor teksten skal stå i - linjen i den højre boks - Der bruges querySelectorAll da feltet skal opdateres i alle steps.
 const pakkeFelter = document.querySelectorAll('#valg1');
 
-// Vi gemmer den valgte pakke i et objekt så den kan genbruges i alle steps
+// Vi gemmer den valgte pakke i et objekt så den kan genbruges i alle steps. 
 const pakkeState = {
     label: "Ingen reolleje valgt",
     pris: 0
@@ -23,7 +23,7 @@ function opdaterPakkeVisning() {
 }
 
 
-// Gennemgå hvert kort og giv både .btn OG #btn klik-event
+// Gennemgå hvert kort og giv både .btn OG #btn en klik-event
 pakkeKort.forEach(kort => {
 
     // Find *både* .btn OG #btn inde i kort
@@ -37,10 +37,10 @@ pakkeKort.forEach(kort => {
         // Man tilføjer et klik-event til knappen 
         btn.addEventListener("click", () => {
 
-            // Vi sørger for at kun et kort er markeret som aktivt
+            // Vi sørger for at kun et kort er markeret som aktivt - dvs. fjern aktiv fra alle kort 
             pakkeKort.forEach(k => k.classList.remove("aktiv"));
 
-            // Tilføj aktiv styling til det valgte kort
+            // Og herefter tilføjer vi aktiv styling til det valgte kort
             kort.classList.add("aktiv");
 
             // Vi finder den tekst der skal stå i den brune boks
@@ -48,7 +48,7 @@ pakkeKort.forEach(kort => {
                 btn.dataset.selected ||
                 kort.querySelector("h2").textContent.trim();
 
-            // Gemmer den vaglte tekst så den kan genbruges
+            // Vi gemmer den valgte pakke i et objekt så den kan genbruges i alle steps. 
             pakkeState.label = valgtTekst;
 
             // Opdater teksten i alle steps fra 1-6
@@ -92,7 +92,7 @@ pakkeKnapper.forEach(knap => {
 
 
 // ---------------------------------------------------
-// STEP 1 – VÆLG LEJEPERIODE
+// STEP 2 – VÆLG LEJEPERIODE
 // ---------------------------------------------------
 
 

@@ -183,8 +183,9 @@
                 <img src="images/to.svg" alt="et billede af tallet to, der indikerer sektion to i bookingflowet">
                 <h1 class="vælgdinlejeperiode-overskrift">Vælg din lejeperiode</h1>
             </div>
-            <div class="container"> 
-                <div id="boks">
+
+            <div class="container"> <!--Hovedcontainer for boks1 og boks2-->
+                <div id="boks"> <!--Venstre boks - yderste lag til de lejeperioder der kan vælges.-->
                     <div class="kort1">
                         <h2>1 uge</h2>
                         <p class="pris">250,-</p>
@@ -219,27 +220,27 @@
                     </div> 
                 </div>
 
-                  <!-- HØJRE BRUN BOKS - step 2-->
-                  <div class="boksogknap">
-                    <div class="boks"> <!--Boks til "Dine valg"-->
+                <!-- HØJRE BRUN BOKS - step 2-->
+                <div class="boksogknap"> <!--Boks til "Dine valg" og til knappen under. Dette gør det nemmere at styre placeringen af knappen i ofrholf til boksen-->
+                    <div class="boks"> <!--Boks til kun "Dine valg"-->
                  
-                    <div class="tekstboks">
+                    <div class="tekstboks"> <!--Boks til kun teksten. Har sin egen div for at kunne styre CSS udenom selve boksen-->
                     <h2>Dine Valg:</h2>
 
-                    <div class="valg-linje">
-                        <img src="images/enhvid.svg" alt="01 ikon" class="valg-ikon">
-                        <p id="valg1">Ingen reolleje valgt</p>
-                    </div>
+                        <div class="valg-linje"> 
+                            <img src="images/enhvid.svg" alt="01 ikon" class="valg-ikon">
+                            <p id="valg1">Ingen reolleje valgt</p>
+                        </div>
 
-                    <div class="valg-linje">
-                        <img src="images/tohvid.svg" alt="02 ikon" class="valg-ikon">
-                        <p id="valg2">Ingen periode valgt</p>
-                    </div>
+                        <div class="valg-linje">
+                            <img src="images/tohvid.svg" alt="02 ikon" class="valg-ikon">
+                            <p id="valg2">Ingen periode valgt</p>
+                        </div>
 
-                    <div class="prislinje">
-                        <p>PRIS</p>
-                        <p id="beloeb">0 kr.</p>
-                    </div>
+                        <div class="prislinje">
+                            <p>PRIS</p>
+                            <p id="beloeb">0 kr.</p>
+                        </div>
                     </div>
                     </div>
 
