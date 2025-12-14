@@ -1,25 +1,28 @@
+ // Vi finder HTML elementet med ID, betalbtn, godkend og annullerBtn. 
 const betalBtn = document.getElementById("betalBtn");
 const godkendt = document.getElementById("godkendt");
 const annullerBtn = document.getElementById("annullerBtn");
 
-
+ 
+//“Når man klikker på betalBtn, så kør funktionen under. 
 betalBtn.onclick = function () {
   
-    // skjul blå betalingsknap
+    // Den blå betalingsknap skjules
   betalBtn.style.display = "none";
   
-  // vis godkendt-ikon
+  // Godkendt-ikonet vises
   godkendt.style.display = "block";
 
-   // skjul annuller-knap
+   // Annuller-knappen skjules
   annullerBtn.style.display = "none";
 
-  // send videre efter 2 sekunder til tak-siden
+  // Når der er trykket på betalnBtn senes man til tak-siden efter 2 sekunder
   setTimeout(function () {
     window.location.href = "tak.html"; 
   }, 2000);
 };
 
+//“Når man klikker på annullerBtn, så kør funktionen under. 
 annullerBtn.onclick = function () {
   alert("Betaling annulleret");
 
