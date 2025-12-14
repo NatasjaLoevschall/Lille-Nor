@@ -112,15 +112,16 @@ const knap1 = document.querySelector("#knap1");
 const kalender = document.getElementById("baggrundscirkel3");
 
 
-// Klik på en periode
+// Klik på en periode - Gennemgår alle periodekort ét for ét.
 kort1.forEach(kort => {
 
+     // Man tilføjer et klik-event til kortet
     kort.addEventListener("click", () => {
 
-        // Fjern aktiv styling fra alle kort
+       // Vi sørger for at kun et kort er markeret som aktivt - dvs. fjern aktiv fra alle kort 
         kort1.forEach(el => el.classList.remove("aktiv"));
 
-        // Marker den valgte som aktiv
+        // og herefter marker den valgte som aktiv
         kort.classList.add("aktiv");
 
         // Hent periode-tekst (f.eks. "4 uger")
@@ -131,12 +132,13 @@ kort1.forEach(kort => {
             felt.textContent = periodeTekst;
         });
 
-        // Hent prisen (fx "675,-")
+        // Hent prisen fra det valgte kort (fx "675,-")
         const prisTekst = kort.querySelector(".pris").textContent;
+        //Vi udtrækker prisen fra selve teksten 
         const tal = prisTekst.match(/\d+/g);
         const pris = tal ? Number(tal.join("")) : 0;
 
-        // Skriv pris i ALLE prisfelter
+        // Viser den valgte pris i alle prisfelter i de højre bokse
         prisFelter.forEach(felt => {
             felt.textContent = pris + " kr.";
         });
@@ -156,23 +158,23 @@ knap1.addEventListener("click", () => {
 // STEP 3 – KALENDER: MÅNEDER + DATO-VALG
 // ---------------------------------------------------
 
-// Titel (fx "DECEMBER 2025")
+// Find titlen (fx "DECEMBER 2025")
 const titel = document.getElementById("maanedTitel");
 
-// Container til alle dage i kalenderen
+// Find containeren til alle klikbare dage i kalenderen
 const kalenderDage = document.querySelector(".kalender-dage");
 
 // Pile til næste / forrige måned (kan være null på nogle sider)
 const nextBtn = document.getElementById("januarmåned");
 const prevBtn = document.getElementById("decembermåned");
 
-// Find knappen
+// Find knappen der fører videre til næste step (stand)
 const knap2 = document.querySelector("#knap2");
 
-// Find baggrundscirkel4 (sektion med stand)
+// Find baggrundscirkel4 (sektion med stand) 
 const stand = document.getElementById("baggrundscirkel4");
 
-// Felt i højre boks hvor startdato skal vises 
+// Find alle felter der skal vise startdatoen i højre boks
 const datoFelter = document.querySelectorAll('#valg3');
 
 
@@ -180,12 +182,14 @@ const datoFelter = document.querySelectorAll('#valg3');
 function tilfoejDagEvents() {
     if (!kalenderDage) return;
 
+    // Find alle individuelle dage i kalenderen
     const dage = kalenderDage.querySelectorAll(".dag");
 
+    // Gennemgå hver dag og tilføj et klik-event
     dage.forEach(dag => {
         dag.addEventListener("click", () => {
 
-            // Hvis dagen er optaget, gør ingenting
+            // Hvis dagen er optaget, sker der ingenting ved den højre boks
             if (dag.classList.contains("dag-optaget")) return;
 
             // Fjern "valgt-dag" fra alle dage
@@ -194,13 +198,14 @@ function tilfoejDagEvents() {
             // Marker den valgte dag
             dag.classList.add("valgt-dag");
 
-            // Lav tekst til den brune boks
+            // Lav tekst til den brune boks. Vi dag, måned og år fra kalenderen.
             const [maanedNavn, aar] = (titel?.textContent || "").split(" ");
             const dagNr = dag.textContent.trim();
 
+            // Vi Laver den tekst, der skal vises i den brune boks.
             const tekst = `Startdato: ${dagNr}. ${maanedNavn ? maanedNavn.toLowerCase() : ""} ${aar || ""}`.trim();
 
-            // Skriv i dato-feltet i højre boks, hvis det findes
+            // Skriver den valgte startdato i alle højre bokse, hvis det findes
             if (datoFelter && datoFelter.length) {
     datoFelter.forEach(function(f){ f.textContent = tekst; });
 }       
@@ -220,11 +225,15 @@ if (knap2 && stand) {
 // --------------------------
 //  MÅNED: DECEMBER 2025
 // --------------------------
+
+//En funktion der viser kalenderen for december 2025. 
 function visDecember() {
     if (!titel || !kalenderDage) return;
 
+    // Sæt titlen til DECEMBER 2025
     titel.textContent = "DECEMBER 2025";
 
+    // Sæt HTML-indholdet for dagene i december 2025
     kalenderDage.innerHTML = `
         <div class="dag dag-optaget">1</div>
         <div class="dag dag-optaget">2</div>
@@ -263,6 +272,7 @@ function visDecember() {
         <div class="dag dag-ledig">31</div>
     `;
 
+   // Tilføj klik-events til de nyligt indsatte dage
     tilfoejDagEvents();
 }
 
@@ -270,11 +280,14 @@ function visDecember() {
 // --------------------------
 //  MÅNED: JANUAR 2026
 // --------------------------
+//En funktion der viser kalenderen for december 2025. 
 function visJanuar() {
     if (!titel || !kalenderDage) return;
 
+    // Sæt titlen til JANUAR 2026
     titel.textContent = "JANUAR 2026";
 
+    // Sæt HTML-indholdet for dagene i januar 2026
     kalenderDage.innerHTML = `
         <div class="dag dag-optaget">1</div>
         <div class="dag dag-optaget">2</div>
@@ -316,7 +329,7 @@ function visJanuar() {
     tilfoejDagEvents();
 }
 
-// tilføj event listeners til pilene
+// tilføj event listeners til pilene - Viser januar, når brugeren klikker på pilen frem og december når brugeren klikker på pilen tilbage,
 if (nextBtn) nextBtn.addEventListener('click', () => {
   visJanuar();
 });
