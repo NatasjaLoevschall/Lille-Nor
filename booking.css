@@ -284,7 +284,10 @@ header.hide-on-scroll {
   color: #ffffff;
 }
 
-/* Hero sektion */
+
+/*POP OP SLUT*/
+
+/*BILLEDE HERO*/
  .hero {
     width: 100%;
     height: 100vh;
@@ -304,7 +307,8 @@ header.hide-on-scroll {
     text-align: center;
     font-family: 'kalam', cursive;
 }
-/*Generelle CSS regler*/
+
+/*GENERELLE CSS REGLER FOR BOOKINGSIDEN*/
 
 /*overskrift flexboks*/
 
@@ -363,6 +367,47 @@ header.hide-on-scroll {
     font-size: 16px;
     
 }
+
+/*brun tekstboks*/
+.tekstboks {
+    display: flex;
+    flex-direction: column;
+    height: 100%; /* hvis nødvendigt */
+    padding: 30px;
+}
+.tekstboks h2 {
+    font-weight: 600;
+    margin-bottom: 20px;
+    padding-left: 10px;
+}
+
+.valg-linje {
+    display: flex;
+    align-items: center;
+    gap: 12px;                 /* afstand mellem ikon og tekst */
+    width: 100%;
+    padding: 10px;
+}
+
+/* nederste prislinje */
+.prislinje{
+    margin-top: auto;            /* skubber den ned i bunden */
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 20px;
+    border-top: 2px solid white;
+    padding-top: 20px;
+}
+
+.valg-ikon {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+}
+
+/*betalingsknap i bunden*/
 .betalingsknap button:hover{
     background-color: #C4913D;
     color: white;
@@ -390,6 +435,8 @@ header.hide-on-scroll {
     color: white;
     cursor: pointer;
 }
+
+/*FØRSTE SEKTION AF BOOKINGFLOW*/
 
  #baggrundscirkel1 {
     width: 100%;
@@ -499,7 +546,11 @@ header.hide-on-scroll {
   .card:hover{
     border-color: #d3ad73;           /* Gul ramme */
   }
-  
+
+/*FØRSTE SEKTION SLUT*/
+
+/*ANDEN SEKTION AF BOOKING FLOW*/
+
 /*baggrundsbillede flexboks - Step 2, vælg din lejeperiode*/
 #baggrundscirkel2{
     width: 100%;
@@ -558,46 +609,9 @@ header.hide-on-scroll {
     border-color: #C4913D !important; /* samme farve som hover på andre kort */
 
 }
+/*SEKTION SLUT*/
 
-.tekstboks {
-    display: flex;
-    flex-direction: column;
-    height: 100%; /* hvis nødvendigt */
-    padding: 30px;
-}
-.tekstboks h2 {
-    font-weight: 600;
-    margin-bottom: 20px;
-    padding-left: 10px;
-}
-
-.valg-linje {
-    display: flex;
-    align-items: center;
-    gap: 12px;                 /* afstand mellem ikon og tekst */
-    width: 100%;
-    padding: 10px;
-}
-
-/* nederste prislinje */
-.prislinje{
-    margin-top: auto;            /* skubber den ned i bunden */
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 20px;
-    border-top: 2px solid white;
-    padding-top: 20px;
-}
-
-.valg-ikon {
-    width: 28px;
-    height: 28px;
-    object-fit: contain;
-}
-
-/*VÆLG DIN DATO SEKTION*/
+/*TREDJE SEKTION - VÆLG DIN DATO SEKTION*/
 
 /*baggrundsbillede2 flexboks*/
 #baggrundscirkel3{
@@ -743,9 +757,11 @@ header.hide-on-scroll {
     border-color: #8B817C;
     background-color: #8B817C;
 }
+/*SEKTION SLUT*/
 
 
-/*baggrundsbillede2 flexboks*/
+/*FJERDE SEKTION - VÆLG DIN STAND*/
+
 #baggrundscirkel4 {
     width: 100%;
     height: 100vh;
@@ -832,8 +848,10 @@ header.hide-on-scroll {
 .optaget rect:hover, .optaget path:hover, .optaget polygon:hover {
     fill: #C38894; /* mørk rød farve ved hover */
 }
+/*SEKTION SLUT*/
 
-/*baggrundsbillede2 flexboks*/
+
+/*SEKTION FEM - VÆLG TILVALG*/
 #baggrundscirkel5 {
     width: 100%;
     height: 100vh;
@@ -915,9 +933,9 @@ header.hide-on-scroll {
     color: white;
     gap: 15px;
 }
+/*SEKTION SLUT*/
 
-
-/*indtast dine oplysninger sektion*/
+/*SEKTION SEKS - indtast dine oplysninger sektion*/
 
 /*store container til overskrift og de 2 bokse*/
 #container-oplysninger{
