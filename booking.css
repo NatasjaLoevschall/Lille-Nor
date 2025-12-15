@@ -358,6 +358,11 @@ header.hide-on-scroll {
     font-size: 16px;
     
 }
+.knap button:hover{
+    background-color: #C4913D;
+    color: white;
+    cursor: pointer;
+} 
 .knap button{
     background-color: #E4B66C;
     width: 200px;
@@ -430,11 +435,7 @@ header.hide-on-scroll {
     font-size: 16px;
     
 }
-.betalingsknap button:hover{
-    background-color: #C4913D;
-    color: white;
-    cursor: pointer;
-}
+
 
 /*FØRSTE SEKTION AF BOOKINGFLOW*/
 
