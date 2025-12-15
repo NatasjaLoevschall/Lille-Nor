@@ -120,6 +120,7 @@ header.hide-on-scroll {
 
 .navbar-logo img {
   height: 40px;
+  display: block;
 }
 
 .navbar-container .nav-links {

@@ -137,6 +137,7 @@ header.scrolled {
 
 .navbar-logo img {
   height: 40px;
+  display: block;
 }
 
 .navbar-container .nav-links {
