@@ -215,9 +215,10 @@ header.hide-on-scroll {
   z-index: 2000;
 }
 #bear-popup-overlay h1{
-      font-family: 'Kalam', cursive;
-      font-size: 40px;
-      font-weight: 300px;
+    font-family: 'kalam';
+    color: #332823;
+    font-size: 50px;
+    font-weight: 500;
 }
 
 .popup-content {
