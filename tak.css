@@ -71,6 +71,7 @@ border-radius: 20px 20px 20px 20px;
 
 .navbar-logo img {
 height: 40px;
+display: block;
 }
 
 .navbar-container .nav-links {
