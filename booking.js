@@ -62,6 +62,7 @@ pakkeKort.forEach(kort => {
 // STEP 1 – VÆLG REOLPAKKE - FÅ KNAPPERNE TIL AT VIRKE 
 // ---------------------------------------------------
 
+//Const: giv JavaScript adgang til at arbejde med HTML-elementerne og gem dem i variable.
 // Find knappen der fører videre 
 const btn = document.querySelector("#btn");
 
@@ -95,7 +96,7 @@ pakkeKnapper.forEach(knap => {
 // STEP 2 – VÆLG LEJEPERIODE
 // ---------------------------------------------------
 
-
+//Const: giv JavaScript adgang til at arbejde med HTML-elementerne og gem dem i variable.
 // Find alle periodekort
 const kort1 = document.querySelectorAll(".kort1");
 
@@ -158,6 +159,7 @@ knap1.addEventListener("click", () => {
 // STEP 3 – KALENDER: MÅNEDER + DATO-VALG
 // ---------------------------------------------------
 
+//Const: giv JavaScript adgang til at arbejde med HTML-elementerne og gem dem i variable.
 // Find titlen (fx "DECEMBER 2025")
 const titel = document.getElementById("maanedTitel");
 
@@ -345,7 +347,7 @@ visDecember();
 //  STEP 4 – VÆLG STAND
 // --------------------------
 
-
+//Const: giv JavaScript adgang til at arbejde med HTML-elementerne og gem dem i variable.
 // Find alle ledige stande (dem du kan klikke på), og gem dem i den KONSTANSTE varible "ledigeStande"
 const ledigeStande = document.querySelectorAll('.ledig');
 
@@ -412,6 +414,7 @@ knap3.addEventListener("click", () => { //Arrow function () => {} -> Samme som f
 //  Tilkøb sektion - step 5
 // --------------------------
 
+//Const: giv JavaScript adgang til at arbejde med HTML-elementerne og gem dem i variable.
 // Find alle kort i tilkøbsektionen
 const kort = document.querySelectorAll('.kort');
 

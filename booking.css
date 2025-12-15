@@ -344,18 +344,18 @@ header.hide-on-scroll {
 
 /*brun boks med knap i*/
 .boksogknap{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    display: flex;                  /* gør det til en flexboks for at styre placering og afstand mellem oversigtsboksen og knappen*/
+    flex-direction: column;         /*stabler elementer lodret*/
+    align-items: center;            /*styrer vandret placering og centrerer indholdet i containeren*/
+    justify-content: center;        /*styrer lodret placering og centrerer indholdet op/ned i containeren*/
     height: 100%;
-    width: 28%; 
-    gap: 30px;
+    width: 28%;                     /* fast bredde for boksen */
+    gap: 30px;                      /* afstand mellem tekstboksen og knappen */
 }
 .knap{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: flex;                  /* Gør det nemt at centrere knappen inde i boksen */
+    justify-content: center;        /* centrerer knappen vandret */
+    align-items: center;            /* centrerer knappen lodret */
     font-size: 16px;
     
 }
@@ -376,31 +376,31 @@ header.hide-on-scroll {
 
 /*brun tekstboks*/
 .tekstboks {
-    display: flex;
-    flex-direction: column;
-    height: 100%; /* hvis nødvendigt */
+    display: flex;                  /* samler indholdet i en fleksibel kolonne */
+    flex-direction: column;         /* placerer overskrift, valg og pris under hinanden */
+    height: 100%;                   /* gør det muligt at placere prislinjen i bunden*/
     padding: 30px;
 }
 .tekstboks h2 {
     font-weight: 600;
-    margin-bottom: 20px;
+    margin-bottom: 20px;            /* afstand til valgene under */
     padding-left: 10px;
 }
 
 .valg-linje {
-    display: flex;
-    align-items: center;
-    gap: 12px;                 /* afstand mellem ikon og tekst */
+    display: flex;                  /* placerer ikon og tekst på én linje */
+    align-items: center;            /* centrerer ikon og tekst lodret */
+    gap: 12px;                      /* afstand mellem ikon og tekst */
     width: 100%;
     padding: 10px;
 }
 
 /* nederste prislinje */
 .prislinje{
-    margin-top: auto;            /* skubber den ned i bunden */
+    margin-top: auto;               /* skubber prislinjen helt ned i bunden */
     width: 100%;
-    display: flex;
-    justify-content: space-between;
+    display: flex;                  /* placerer <p>PRIS</p> og selve prisen på samme linje */
+    justify-content: space-between; /* skubber <p>PRIS</p> til venstre og selve prisen til højre */
     align-items: center;
     font-size: 20px;
     border-top: 2px solid white;
@@ -410,7 +410,7 @@ header.hide-on-scroll {
 .valg-ikon {
     width: 28px;
     height: 28px;
-    object-fit: contain;
+    object-fit: contain;           /* sikrer ensartet ikonstørrelse */
 }
 
 /*betalingsknap i bunden*/
