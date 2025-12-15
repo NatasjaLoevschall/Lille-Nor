@@ -120,7 +120,6 @@ header.hide-on-scroll {
 
 .navbar-logo img {
   height: 40px;
-  display: block;
 }
 
 .navbar-container .nav-links {
@@ -216,9 +215,10 @@ header.hide-on-scroll {
   z-index: 2000;
 }
 #bear-popup-overlay h1{
-      font-family: 'Kalam', cursive;
-      font-size: 40px;
-      font-weight: 300px;
+    font-family: 'kalam';
+    color: #332823;
+    font-size: 50px;
+    font-weight: 500;
 }
 
 .popup-content {
@@ -359,6 +359,11 @@ header.hide-on-scroll {
     font-size: 16px;
     
 }
+.knap button:hover{
+    background-color: #C4913D;
+    color: white;
+    cursor: pointer;
+} 
 .knap button{
     background-color: #E4B66C;
     width: 200px;
@@ -431,11 +436,7 @@ header.hide-on-scroll {
     font-size: 16px;
     
 }
-.betalingsknap button:hover{
-    background-color: #C4913D;
-    color: white;
-    cursor: pointer;
-}
+
 
 /*FØRSTE SEKTION AF BOOKINGFLOW*/
 
