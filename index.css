@@ -538,12 +538,11 @@ footer .container{
 .footer-col h3{
     color: white;
     margin-bottom: 25px;
-    font-size: 20px;
+    font-size: 18px;
     position: relative;
-    font-family: 'Ubuntu', sans-serif;
 }
 
-.footer-col h4::before{
+.footer-col h3::before{
     content: '';
     width: 70px;
     height: 1px;
