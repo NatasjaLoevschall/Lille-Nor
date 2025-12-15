@@ -7,6 +7,7 @@
 a {
   text-decoration: none; /* Fjerner understregning */
 }
+
 /* Body og generelle stilarter */
 body {
   background-color: #FBF4EE; /* Lys cremefarvet baggrund */
@@ -250,72 +251,71 @@ header.scrolled {
 /* Bamse */
 
 #teddy-default {
-  position: fixed;
-  right: 40px;
-  bottom: -100px;                      /* starter synlig */
-  width: 160px;                   /* tilpas størrelse */
+  position: fixed; /* Bamse følger med ved scroll */
+  right: 40px; /* Placering fra højre */
+  bottom: -100px; /* starter synlig */
+  width: 160px;   /* bamsens størrelse - container */
   cursor: pointer;
-  z-index: 1000;
-  transition: bottom 0.35s ease;  /* så den kan glide op/ned */
+  z-index: 1000; /* Er over det øvrige indhold */
+  transition: bottom 0.35s ease;  /* Giver det en glidende bevægelse */
 }
 
 #teddy-default img {
-  display: block;
-  max-height: 400px;
+  display: block; /* Fjerner luft */
+  max-height: 400px; /*Sætter en grænse på max højde */
 }
 
 /* Når bamsen er "trukket ned" efter man har lukket popup */
 #teddy-default.lowered {
-  bottom: -270px;   /* justér hvor meget den skal gemmes */
+  bottom: -270px;   /* Skjuler bamsen yderigere */
 }
 
 /* popup-box */
 
 #bear-popup-overlay {
   position: fixed;
-  inset: 0; 
-  display: none;            
-  align-items: center;
+  inset: 0; /* Dækker hele viewport */
+  display: none; /* Skjult indtil aktivering */
+  align-items: center; 
   justify-content: center;
-  background: rgba(0, 0, 0, 0.5);
-  z-index: 2000;
+  background: rgba(0, 0, 0, 0.5); /* Gennemsigtig baggrund */
+  z-index: 2000; /* Ligger over alt andet indhold */
 }
 
 .popup-content {
   background: #FBF4EE;
-  max-width: 700px;
-  border-radius: 14px;
+  max-width: 700px; /* Max bredde */
+  border-radius: 14px; 
   position: relative;
   box-shadow: 0 10px 30px #332823;
   width: 100%;
   padding: 50px;
 
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
+  display: flex; /* Flexbox */
+  justify-content: center; /* Centrerer indhold lodret */
+  flex-direction: column; /* Elementerne stables lodret */
+  align-items: center; /* Centrerer indhold vandret */
+  text-align: center; /* Centrerer tekst */
   
   height: auto;
 }
 
 .popup-close {
-  position: absolute;
+  position: absolute; /* Placeres i forhold til .popup-content */
   top: 10px;
   right: 14px;
   border: none;
   background: none;
   line-height: 1;
   cursor: pointer;
-  font-size: 50px;
-  color: #332823;
+  font-size: 50px; /* Størrelse på krydset */
+  color: #332823; /* Farve på krydset */
 }
 
 .cta-btn {
   background-color: #E4B66C;
   color: #332823;
   padding: 10px 10px;
-  border: none;
   border-radius: 5px;
   cursor: pointer;
   font-size: 16px;
@@ -324,9 +324,9 @@ header.scrolled {
 }
 
 #popup-img {
-  max-width: 70%;         /* eller 50%, 70% osv */
+  max-width: 70%; /* Billedets størrelse i forhold til pop up */
   height: auto;       /* bevarer proportioner */
-  border-radius: 10px; /* valgfrit */
+  border-radius: 10px; /* Afrundede hjørner */
   margin: 10px 0;
   object-fit: contain;
 }
@@ -403,11 +403,11 @@ header.scrolled {
     color: #332823;
   }
   
+  
   .ln-btn:hover {
     transform: translateY(-2px);
     box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
     background-color: #d59f49;
-
   }
   
   /* BI + FLYVESTI (ét billede) */
