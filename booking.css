@@ -716,11 +716,19 @@ header.hide-on-scroll {
 }
 
 /* ===== KALENDER INTERAKTION ===== */
-
+.dag-ledig{
+    color:  #507b50;
+}
 /* Ledige datoer – hover (mere grøn) */
 .dag-ledig:hover {
     background-color: #88c388;
     border-color: #88c388;
+    color: #ffffff;
+}
+
+.valgt-dag{
+    background-color: #88C388;
+    border-color: #88C388;
     color: #ffffff;
 }
 
@@ -816,7 +824,7 @@ header.hide-on-scroll {
 /*cursor på tal og farve*/
 .ledig text {
     cursor: pointer;
-    fill: #507b50; /* mørk grøn farve ved hover */
+    fill: #507b50; 
 }
 
 /*hover på figurer*/
